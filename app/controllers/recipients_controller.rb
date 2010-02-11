@@ -2,19 +2,47 @@ class RecipientsController < ApplicationController
   # GET /recipients
   # GET /recipients.xml
   def index
-    @recipients = Recipient.all
+    @recipients = Recipient.all(:all, :order => "created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @recipients }
+      format.csv do
+          csv_string = FasterCSV.generate do |csv|          
+            # header row
+            header_row = Recipient.column_names
+            header_row.delete("id")
+            header_row.delete("token")
+            csv << header_row
+            # data rows
+            @recipients.each do |recipient|
+              csvRow = Array.new
+              header_row.each do |field|
+                unless (field == "id") || (field == "token")
+                  csvRow << recipient[field]
+                end
+              end           
+              csv << csvRow
+            end          
+          end
+            date = Date.today
+            filename = "Mailing_List_" + date.to_s + ".csv"
+            # send it to the browsah
+            send_data(csv_string,
+            :type => 'text/csv; charset=iso-8859-1; header=present',
+            :disposition => "attachment",
+            :filename => filename)
+        end # end format.csv
     end
   end
 
   # GET /recipients/1
   # GET /recipients/1.xml
   def show
-    @recipient = Recipient.find(params[:id])
-
+    @recipient = Recipient.find_by_token(params[:id])
+    unless @recipient
+      flash.now[:notice] = "Your token is invalid"
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @recipient }
@@ -74,12 +102,18 @@ class RecipientsController < ApplicationController
   # DELETE /recipients/1
   # DELETE /recipients/1.xml
   def destroy
-    @recipient = Recipient.find(params[:id])
-    @recipient.destroy
+   @recipient = Recipient.find_by_email(params[:form][:email])
 
     respond_to do |format|
-      format.html { redirect_to(recipients_url) }
-      format.xml  { head :ok }
+      if @recipient.update_attributes(:active => false)
+        flash[:notice] = "You are no off of the newsletter list."
+        format.html { redirect_to(root_path) }
+        format.xml  { head :ok }
+      else
+        flash[:error] = "Something went wrong, we couldn't take you off the list."
+        format.html { redirect_to(root_path) }
+        format.xml  { render :xml => "nono", :status => :unprocessable_entity }
+      end
     end
   end
 end

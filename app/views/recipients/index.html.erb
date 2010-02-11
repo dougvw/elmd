@@ -1,40 +1,34 @@
-<h1>Listing recipients</h1>
+<h1>Mailing List</h1>
 
 <table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Address line 1</th>
-    <th>Address line2</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Zip</th>
-    <th>Phone</th>
-    <th>Email</th>
-    <th>Token</th>
-    <th>Active</th>
-  </tr>
-
+	<tr>
+		<th>First</th>
+	 	<th>Last</th>
+		<th>Email</th>
+		<th>Address</th>
+		<th></th>
+		<th></th>
+		<th>Active</th>
+		<th>Destroy</th>
+	</tr>
+	
 <% @recipients.each do |recipient| %>
   <tr>
-    <td><%=h recipient.first_name %></td>
-    <td><%=h recipient.last_name %></td>
-    <td><%=h recipient.address_line1 %></td>
-    <td><%=h recipient.address_line2 %></td>
-    <td><%=h recipient.city %></td>
-    <td><%=h recipient.state %></td>
-    <td><%=h recipient.zip %></td>
-    <td><%=h recipient.phone %></td>
-    <td><%=h recipient.email %></td>
-    <td><%=h recipient.token %></td>
-    <td><%=h recipient.active %></td>
-    <td><%= link_to 'Show', recipient %></td>
-    <td><%= link_to 'Edit', edit_recipient_path(recipient) %></td>
+	<td><%= link_to recipient.first_name, edit_recipient_path(recipient) %></td>
+ 	<td><%= link_to recipient.last_name, edit_recipient_path(recipient) %></td>
+	<td><%= mail_to recipient.email, recipient.email %></td>
+    <td><%= link_to recipient.address_line1, edit_recipient_path(recipient) %></td>
+	<td><%= link_to recipient.address_line2, edit_recipient_path(recipient) if recipient.address_line2 %></td>
+	<td><%= link_to (recipient.city + " , " + recipient.state + " " + recipient.zip), edit_recipient_path(recipient) %></td>
+	<td><% if recipient.active? %>
+		Active
+		<% else %>
+		<% end %></td>
     <td><%= link_to 'Destroy', recipient, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New recipient', new_recipient_path %>
+<br>
+<%= link_to 'Export Mailing List', recipients_path + ".csv"%>

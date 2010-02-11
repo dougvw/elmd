@@ -13,7 +13,7 @@
   <%= javascript_include_tag :defaults, "ckeditor/ckeditor" %>
 
 </head>
-<body class="<%= yield :body_classes %>">
+<body class="container">
   <div class="page clearfix">
     <div class="header">
       <h1><%= link_to "Eric Larson MD", root_path %></h1>
@@ -21,8 +21,8 @@
       <ul class="navigation clearfix">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Volunteer", volunteer_path %></li>
         <li><%= link_to "Issues", issues_path %></li>
+		<li><%= link_to "Volunteer", volunteer_path %></li>
         <% if current_user %>
           <li><%= link_to "Admin", admin_path %></li>
           <li><%= link_to "Logout", logout_path %></li>
