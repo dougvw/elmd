@@ -10,6 +10,12 @@ class PagesController < ApplicationController
 
   def positions
   end
+  
+  def issues
+  end
+  
+  def make_a_donation
+  end
 
   def volunteer
   end

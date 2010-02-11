@@ -1,0 +1,26 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: Dave
+  last_name: Agema
+  address_line1: 123 Oak St.
+  city: Grandville
+  state: MI
+  zip: 49555
+  phone: 6165551234
+  email: dave@example.com
+  token: 07719ae922f6378dc8562daa6b77008a
+  active: true
+
+two:
+  first_name: Justin
+  last_name: Amash
+  address_line1: 321 Maple St
+  address_line2: Apt. 302
+  city: Grand Rapids
+  state: Mi
+  zip: 49503
+  phone: 6165554321
+  email: justin@test.com
+  token: cbbe9cc3dbfda6a647343855061aecf2
+  active: true

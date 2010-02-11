@@ -1,0 +1,192 @@
+body {
+  background-image: url(../images/body_background.jpg);
+  background-repeat: no-repeat;
+  background-color: #FBF8C9;
+}
+
+.page {
+  width: 960px;
+  margin: 0 auto;
+  -webkit-box-shadow: #000 0 0 100px;
+  -moz-box-shadow: #000 0 0 100px;
+  background-color: #fff;
+}
+
+.page .header {
+  position: relative;
+  height: 150px;
+}
+
+.page .header h1 a {
+  position: relative;
+  top: 30px;
+  left: 40px;
+  display: block;
+  width: 143px;
+  height: 76px;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  text-indent: -1000em;
+}
+
+.page .header .navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page .header .navigation li {
+  float: left;
+}
+
+.page .header .navigation li a {
+  display: block;
+  padding: 10px 20px;
+  color: #FF742E;
+  text-decoration: none;
+}
+
+.page .header .navigation li a:hover {
+  text-decoration: underline;
+}
+
+.page .header .navigation li.make_a_donation a {
+  background-color: #FF742E;
+  color: #fff;
+  font-weight: bold;
+}
+
+.page .header .mission_statement {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  color: #a7da2b;
+  font-size: 18px;
+}
+
+.page .header .mission_statement p {
+  margin: 0;
+}
+
+.page .slideshow {
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.page .slideshow .text {
+  float: left;
+  width: 270px;
+  height: 280px;
+  padding: 10px;
+  background-image: url(../images/slideshow_text_background.png);
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 15px;
+  
+}
+
+.page .slideshow img {
+  float: left;
+  width: 670px;
+  height: 300px;
+}
+
+.page .sidebar {
+  float: left;
+  width: 250px;
+}
+
+.page .sidebar .section .header {
+  height: auto;
+  padding: 20px 10px 10px 10px;
+  background-color: #FDF173;
+  color: #444;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.page .sidebar .section .content {
+  padding: 10px;
+}
+
+.page .sidebar .section .content .note {
+  margin-bottom: 10px;
+}
+
+.page .sidebar .section .content .note .title {
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: bold;
+}
+
+.page .sidebar .section .content .note .read_more {
+  float: right;
+  text-decoration: none;
+}
+
+.page .sidebar .section .content .event {
+  margin-bottom: 10px;
+}
+
+.page .sidebar .section .content .event .name {
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: bold;
+}
+
+
+.page .sidebar .section .content .event .more_info {
+  float: right;
+  text-decoration: none;
+}
+
+.page .main {
+  float: left;
+  width: 650px;
+  padding: 0 10px 10px 50px;
+}
+
+.page .main h2 {
+  color: #FF742E;
+  font-weight: bold;
+}
+
+.page .main .contact_us {
+  width: 500px;
+}
+
+.page .main .contact_us .message {
+  height: 10em;
+}
+
+.page .main .contact_us .submits {
+  margin: 10px 0 0 0;
+  text-align: right;
+}
+
+/* =textare */
+.input_field_wrapper {
+  padding: 0 .25em;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  background-color: #fff;
+  background-image: url(../images/input_field_background.gif);
+  background-repeat: repeat-x;
+  background-position: top left;
+}
+
+.input_field_wrapper textarea,
+.input_field_wrapper input {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 11px;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+}

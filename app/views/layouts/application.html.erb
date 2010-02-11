@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Larson for Michigan 72nd</title>
+  <%= stylesheet_link_tag 'blueprint/screen', 'screen', :cache => "screen-all" %>
+  <!--[if IE]>
+    <%= stylesheet_link_tag 'blueprint/ie', 'ie', :cache => "ie-all" %>
+  <![endif]-->
+  <%= stylesheet_link_tag 'blueprint/print', 'print', :media => "print", :cache => "ie-print" %>
+  <%= javascript_include_tag :defaults, "ckeditor/ckeditor" %>
+
+</head>
+<body class="<%= yield :body_classes %>">
+  <div class="page clearfix">
+    <div class="header">
+      <h1><%= link_to "Eric Larson MD", root_path %></h1>
+      
+      <ul class="navigation clearfix">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About Us", about_path %></li>
+        <li><%= link_to "Get Involved", volunteer_path %></li>
+        <li><%= link_to "Issues", issues_path %></li>
+        <% if current_user %>
+          <li><%= link_to "Admin", admin_path %></li>
+          <li><%= link_to "Logout", logout_path %></li>
+        <% else -%>
+          <li><%= link_to "Login", login_path %></li>
+        <% end %>
+      </ul>
+   </div>
+    
+    
+    <div class="main">
+      <p style="color: green"><%= flash[:notice] %></p>
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

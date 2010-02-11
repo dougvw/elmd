@@ -1,0 +1,58 @@
+<p>
+  <b>First name:</b>
+  <%=h @recipient.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @recipient.last_name %>
+</p>
+
+<p>
+  <b>Address line 1:</b>
+  <%=h @recipient.address_line1 %>
+</p>
+
+<p>
+  <b>Address line2:</b>
+  <%=h @recipient.address_line2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @recipient.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @recipient.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%=h @recipient.zip %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @recipient.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @recipient.email %>
+</p>
+
+<p>
+  <b>Token:</b>
+  <%=h @recipient.token %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @recipient.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_recipient_path(@recipient) %> |
+<%= link_to 'Back', recipients_path %>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100210040336) do
+ActiveRecord::Schema.define(:version => 20100210202922) do
 
   create_table "privileges", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,22 @@ ActiveRecord::Schema.define(:version => 20100210040336) do
   add_index "privileges_roles", ["privilege_id"], :name => "index_privileges_roles_on_privilege_id"
   add_index "privileges_roles", ["role_id", "privilege_id"], :name => "index_privileges_roles_on_role_id_and_privilege_id"
   add_index "privileges_roles", ["role_id"], :name => "index_privileges_roles_on_role_id"
+
+  create_table "recipients", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address_line1"
+    t.string   "address_line2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "token"
+    t.boolean  "active",        :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
