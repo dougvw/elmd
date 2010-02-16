@@ -1,9 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
   
+  
    #named routes
   map.with_options :controller => "pages" do |pages_map|
     pages_map.about        "about",              :action => "about"
-    pages_map.volunteer    "volunteer",          :action => "volunteer"
+    #pages_map.volunteer    "volunteer",          :action => "volunteer"
     pages_map.make_a_donation "make_a_donation",    :action => "make_a_donation"
     pages_map.issues          "issues",             :action => "issues"
     pages_map.admin           "admin",              :action => "admin"
@@ -13,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   
   #resources
   map.resources :recipients
+  map.resources :volunteers
   
   #root path
   map.root :controller => "pages"

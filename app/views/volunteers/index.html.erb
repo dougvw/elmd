@@ -1,0 +1,56 @@
+<h1>Listing volunteers</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Address line1</th>
+    <th>Address line2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Token</th>
+    <th>Active</th>
+    <th>Phone calls</th>
+    <th>Distribute signs</th>
+    <th>Write letters</th>
+    <th>Host event</th>
+    <th>Large sign</th>
+    <th>Yard sign</th>
+    <th>Office help</th>
+    <th>Other</th>
+  </tr>
+
+<% @volunteers.each do |volunteer| %>
+  <tr>
+    <td><%=h volunteer.first_name %></td>
+    <td><%=h volunteer.last_name %></td>
+    <td><%=h volunteer.address_line1 %></td>
+    <td><%=h volunteer.address_line2 %></td>
+    <td><%=h volunteer.city %></td>
+    <td><%=h volunteer.state %></td>
+    <td><%=h volunteer.zip %></td>
+    <td><%=h volunteer.phone %></td>
+    <td><%=h volunteer.email %></td>
+    <td><%=h volunteer.token %></td>
+    <td><%=h volunteer.active %></td>
+    <td><%=h volunteer.phone_calls %></td>
+    <td><%=h volunteer.distribute_signs %></td>
+    <td><%=h volunteer.write_letters %></td>
+    <td><%=h volunteer.host_event %></td>
+    <td><%=h volunteer.large_sign %></td>
+    <td><%=h volunteer.yard_sign %></td>
+    <td><%=h volunteer.office_help %></td>
+    <td><%=h volunteer.other %></td>
+    <td><%= link_to 'Show', volunteer %></td>
+    <td><%= link_to 'Edit', edit_volunteer_path(volunteer) %></td>
+    <td><%= link_to 'Destroy', volunteer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New volunteer', new_volunteer_path %>
