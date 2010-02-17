@@ -4,7 +4,7 @@ class Recipient < ActiveRecord::Base
   
   before_save :make_token
   
-  validates_presence_of :first_name, :last_name, :email
+  validates_presence_of :zip, :email
   
   def make_token
     self.token = Digest::MD5.hexdigest("#{self.email}-#{Time.now.to_i}")

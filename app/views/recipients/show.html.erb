@@ -1,58 +1,46 @@
+<b>Email:</b>
+  <%=h @recipient.email if @recipient.email %>
+</p>
+<p>
+<p>
+  <b>Zip:</b>
+  <%=h @recipient.zip if @recipient.zip %>
+</p>
 <p>
   <b>First name:</b>
-  <%=h @recipient.first_name %>
+  <%=h @recipient.first_name if @recipient.first_name %>
 </p>
 
 <p>
   <b>Last name:</b>
-  <%=h @recipient.last_name %>
+  <%=h @recipient.last_name if @recipient.last_name %>
 </p>
 
 <p>
   <b>Address line 1:</b>
-  <%=h @recipient.address_line1 %>
+  <%=h @recipient.address_line1 if @recipient.address_line1 %>
 </p>
 
 <p>
   <b>Address line2:</b>
-  <%=h @recipient.address_line2 %>
+  <%=h @recipient.address_line2 if @recipient.address_line2 %>
 </p>
 
 <p>
   <b>City:</b>
-  <%=h @recipient.city %>
+  <%=h @recipient.city if @recipient.city %>
 </p>
 
 <p>
   <b>State:</b>
-  <%=h @recipient.state %>
-</p>
-
-<p>
-  <b>Zip:</b>
-  <%=h @recipient.zip %>
+  <%=h @recipient.state if @recipient.state %>
 </p>
 
 <p>
   <b>Phone:</b>
-  <%=h @recipient.phone %>
+  <%=h @recipient.phone if @recipient.phone %>
 </p>
 
-<p>
-  <b>Email:</b>
-  <%=h @recipient.email %>
-</p>
-
-<p>
-  <b>Token:</b>
-  <%=h @recipient.token %>
-</p>
-
-<p>
-  <b>Active:</b>
-  <%=h @recipient.active %>
-</p>
-
-
+<%= link_to 'Remove this address from the Mailing List', @recipient, :confirm => 'Are you sure?', :method => :delete %>
 <%= link_to 'Edit', edit_recipient_path(@recipient) %> |
-<%= link_to 'Back', recipients_path %>
+<%= link_to 'Back', root_path %>

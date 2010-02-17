@@ -2,28 +2,32 @@
 
 <table>
 	<tr>
+		<th>Email</th>
 		<th>First</th>
 	 	<th>Last</th>
-		<th>Email</th>
 		<th>Address</th>
-		<th></th>
-		<th></th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip</th>
 		<th>Active</th>
+		<th>Edit</th>
 		<th>Destroy</th>
 	</tr>
 	
 <% @recipients.each do |recipient| %>
   <tr>
-	<td><%= link_to recipient.first_name, edit_recipient_path(recipient) %></td>
- 	<td><%= link_to recipient.last_name, edit_recipient_path(recipient) %></td>
 	<td><%= mail_to recipient.email, recipient.email %></td>
-    <td><%= link_to recipient.address_line1, edit_recipient_path(recipient) %></td>
-	<td><%= link_to recipient.address_line2, edit_recipient_path(recipient) if recipient.address_line2 %></td>
-	<td><%= link_to (recipient.city + " , " + recipient.state + " " + recipient.zip), edit_recipient_path(recipient) %></td>
+	<td><%= h recipient.first_name %></td>
+ 	<td><%= h recipient.last_name %></td>
+    <td><%= h recipient.address_line1 %></td>
+	<td><%= h recipient.city %></td>
+	<td><%= h recipient.state %></td>
+	<td><%= h recipient.zip %></td>
 	<td><% if recipient.active? %>
 		Active
 		<% else %>
 		<% end %></td>
+	<td><%= link_to "Edit", edit_recipient_path(recipient) %></td>
     <td><%= link_to 'Destroy', recipient, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
