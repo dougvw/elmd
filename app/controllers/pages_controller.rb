@@ -14,6 +14,10 @@ class PagesController < ApplicationController
   def issues
   end
   
+  def endorsements
+    
+  end
+  
   def make_a_donation
   end
 

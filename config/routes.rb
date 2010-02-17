@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
     pages_map.volunteer    "volunteer",          :action => "volunteer"
     pages_map.make_a_donation "make_a_donation",    :action => "make_a_donation"
     pages_map.issues          "issues",             :action => "issues"
+    pages_map.endorsements    "endorsements",         :action => "endorsements"
     pages_map.admin           "admin",              :action => "admin"
     #pages_map.contact_us      "contact_us",        :action => "contact_us"
     #pages_map.send_email      "send_email",        :action => "send_email"
