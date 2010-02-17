@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: Ron
+  last_name: Paul
+  address_line1: 123 Maple St.
+  address_line2: Apt. 2
+  city: Houston
+  state: Tx
+  zip: 12345
+  phone: 333-555-1234
+  email: ron@example.com
+  token: 07719ae922f6378dc8562daa6b77008a
+  active: true
+  phone_calls: true
+  distribute_signs: 
+  write_letters: false
+  host_event: false
+  large_sign: false
+  yard_sign: true
+  office_help: false
+
+two:
+  first_name: Rahm
+  last_name: emanuel
+  address_line1: 456 Dark Alley
+  city: Los Angeles
+  state: CA
+  zip: 44444
+  phone: 4445551423
+  email: rahm@example.com
+  token: cbbe9cc3dbfda6a647343855061aecf2
+  active: true
+  phone_calls: false
+  distribute_signs: 
+  write_letters: false
+  host_event: false
+  large_sign: false
+  yard_sign: false
+  office_help: false
+  other: Television interviews major networks.

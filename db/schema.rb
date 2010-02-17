@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100210202922) do
+ActiveRecord::Schema.define(:version => 20100216030148) do
 
   create_table "privileges", :force => true do |t|
     t.string   "name"
@@ -74,5 +74,29 @@ ActiveRecord::Schema.define(:version => 20100210202922) do
   add_index "users", ["email_address"], :name => "index_users_on_email_address"
   add_index "users", ["remember_me_token", "remember_me_token_expires_at"], :name => "index_users_on_remember_me_token"
   add_index "users", ["role_id"], :name => "index_users_on_role_id"
+
+  create_table "volunteers", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address_line1"
+    t.string   "address_line2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "token"
+    t.boolean  "active",           :default => true
+    t.boolean  "phone_calls"
+    t.boolean  "distribute_signs"
+    t.boolean  "write_letters"
+    t.boolean  "host_event"
+    t.boolean  "large_sign"
+    t.boolean  "yard_sign"
+    t.boolean  "office_help"
+    t.string   "other"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

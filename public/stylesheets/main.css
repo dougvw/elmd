@@ -1,0 +1,42 @@
+body {
+/*	background: #fcc;*/
+}
+
+/* -------- Header Start ----------- */
+div.container {
+	/* background: transparent url(../images/elmd04.png) 0 0; */
+}
+
+div.main-header {
+	height: 300px;
+	
+/*	color: #fff;*/
+/*	background: #ccc; */
+	}
+
+#header h1, h2, h3 {
+	color: #fff;
+}
+
+div.header-sub {
+	height: 20px;  
+/*	background: #fff; */
+}
+
+div.header-name {
+	margin-top: 32px;
+
+/*	background: #fff;*/
+	text-align: right;
+}
+div.nav-space {
+	height: 17px;
+}
+
+#nav-buttons {
+	color: #fff;
+	font-size: 1.8em;
+	text-align: center;
+}
+
+/* -------- Header End ----------- */

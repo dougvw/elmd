@@ -1,0 +1,88 @@
+<h1>Editing volunteer</h1>
+
+<% form_for(@volunteer) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :address_line1 %><br />
+    <%= f.text_field :address_line1 %>
+  </p>
+  <p>
+    <%= f.label :address_line2 %><br />
+    <%= f.text_field :address_line2 %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :token %><br />
+    <%= f.text_field :token %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.label :phone_calls %><br />
+    <%= f.check_box :phone_calls %>
+  </p>
+  <p>
+    <%= f.label :distribute_signs %><br />
+    <%= f.text_field :distribute_signs %>
+  </p>
+  <p>
+    <%= f.label :write_letters %><br />
+    <%= f.check_box :write_letters %>
+  </p>
+  <p>
+    <%= f.label :host_event %><br />
+    <%= f.check_box :host_event %>
+  </p>
+  <p>
+    <%= f.label :large_sign %><br />
+    <%= f.check_box :large_sign %>
+  </p>
+  <p>
+    <%= f.label :yard_sign %><br />
+    <%= f.check_box :yard_sign %>
+  </p>
+  <p>
+    <%= f.label :office_help %><br />
+    <%= f.check_box :office_help %>
+  </p>
+  <p>
+    <%= f.label :other %><br />
+    <%= f.text_field :other %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @volunteer %> |
+<%= link_to 'Back', volunteers_path %>
