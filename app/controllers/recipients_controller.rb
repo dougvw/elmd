@@ -72,8 +72,8 @@ class RecipientsController < ApplicationController
 
     respond_to do |format|
       if @recipient.save
-        flash[:notice] = 'Recipient was successfully created.'
-        format.html { redirect_to(@recipient) }
+        flash[:notice] = 'Your email address was added to our list. Thanks!'
+        format.html { redirect_to(root_path) }
         format.xml  { render :xml => @recipient, :status => :created, :location => @recipient }
       else
         format.html { render :action => "new" }

@@ -17,8 +17,9 @@
   <%= stylesheet_link_tag 'main', 'main' %>
   <%= javascript_include_tag :defaults, "ckeditor/ckeditor" %>
 </head>
+
 <body>
-	<div class="container">
+	<div class="container showgrid">
 		
 		<ul>
        		<li><%= link_to "Home", root_path %></li>
@@ -38,7 +39,20 @@
 			<% if flash[:error] %><div class="error"><%= flash[:error] %></div> <% end %>
 			<% if flash[:info] %><div class="notice"><%= flash[:info] %></div> <% end %>
 		</div>  
-		<%= yield %>
+		<div class="span-24 content">
+			<%= yield %>
+		</div>
+		<div class="span-24" id="footer"> <!-- start footer -->
+			<% form_for(@recipient = Recipient.new) do |f| %>
+  				<%= f.error_messages %>
+				<div class="span-2"><h5>Mailing List:</h5></div>
+				<div class="span-1">Email</div>
+			    <div class="span-4"><%= f.text_field :email, :size => 15 %></div>
+				<div class="span-1">Zip</div>
+			    <div class="span-2"><%= f.text_field :zip, :size => 8 %></div>
+				<div class="span-2 last"><%= f.submit 'Create' %></div>
+			<% end %>
+		</div>  <!-- end footer -->
 	</div>  <!-- end container -->
 </body>
 </html>
