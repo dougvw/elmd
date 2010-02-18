@@ -1,0 +1,8 @@
+<h1>The Issues</h1>
+
+<div id="test-accordion" class="span-12 accordion"> 
+	<% for issue in @issues %>     
+	     <div class="accordion-toggle"><%= h issue.title %></div>      
+	     <div class="accordion-content"><%= h issue.body %></div>      
+     <% end %>
+</div>  

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: Big Government
+  body: Big Government is Bad.  Really bad. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis.
+  active: true
+  order_number: 1
+
+two:
+  title: Transparency
+  body: Sunlight is the best disinfectant. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis.
+  active: true
+  order_number: 2
+
+three:
+  title: Liberty
+  body: Liberty is good. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis.
+  active: true
+  order_number: 3

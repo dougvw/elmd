@@ -41,7 +41,9 @@ class RecipientsController < ApplicationController
   def show
     @recipient = Recipient.find_by_token(params[:id])
     unless @recipient
-      flash.now[:notice] = "Your token is invalid"
+      flash[:error] = "Sorry - Your token is invalid!"
+      redirect_to(:controller => "pages", :action => "index")
+      return
     end
     respond_to do |format|
       format.html # show.html.erb
@@ -106,7 +108,7 @@ class RecipientsController < ApplicationController
 
     respond_to do |format|
       if @recipient.update_attributes(:active => false)
-        flash[:notice] = "You are no off of the newsletter list."
+        flash[:notice] = "You are now off of the mailing list. Thanks."
         format.html { redirect_to(root_path) }
         format.xml  { head :ok }
       else

@@ -1,0 +1,22 @@
+<p>
+  <b>Title:</b>
+  <%=h @issue.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @issue.body %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @issue.active %>
+</p>
+<p>
+  <b>Order Number:</b>
+  <%=h @issue.order_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>

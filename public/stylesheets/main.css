@@ -40,3 +40,30 @@ div.nav-space {
 }
 
 /* -------- Header End ----------- */
+
+/* --------- Accordian ----------- */
+ div#test-accordion{  
+     margin: 10px;  
+     border: 1px solid #aaa;}  
+   
+ div.accordion {  
+     position: relative; /* required for bounding--works around a "peculiarity" in Prototype */  
+ }  
+   
+ div.accordion-toggle{  
+     position: relative; /* required for effect */  
+     z-index: 10;        /* required for effect */  
+     background: #eee;   /* required for effect--can be anything except "transparent" */  
+     cursor: pointer;  
+ }  
+   
+ div.accordion-toggle-active{  
+     background: #fff;  
+ }  
+   
+ div.accordion-content{  
+     overflow: hidden;   /* required for effect */  
+     background: #aaa;  
+ }  
+
+/* ---------- Accordian End --------------- */

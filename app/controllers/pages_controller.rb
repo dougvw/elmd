@@ -15,8 +15,8 @@ class PagesController < ApplicationController
    
   end
   
-  def issues
-   
+  def the_issues
+   @issues = Issue.active
   end
   
   def endorsements

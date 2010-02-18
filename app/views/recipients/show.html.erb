@@ -1,46 +1,15 @@
-<b>Email:</b>
-  <%=h @recipient.email if @recipient.email %>
-</p>
-<p>
-<p>
-  <b>Zip:</b>
-  <%=h @recipient.zip if @recipient.zip %>
-</p>
-<p>
-  <b>First name:</b>
-  <%=h @recipient.first_name if @recipient.first_name %>
-</p>
+<h3>I want to Unsubscribe:</h3>
 
-<p>
-  <b>Last name:</b>
-  <%=h @recipient.last_name if @recipient.last_name %>
-</p>
+We respect your privacy, please enter you email address to unsubscribe.
 
-<p>
-  <b>Address line 1:</b>
-  <%=h @recipient.address_line1 if @recipient.address_line1 %>
-</p>
-
-<p>
-  <b>Address line2:</b>
-  <%=h @recipient.address_line2 if @recipient.address_line2 %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%=h @recipient.city if @recipient.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%=h @recipient.state if @recipient.state %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%=h @recipient.phone if @recipient.phone %>
-</p>
-
-<%= link_to 'Remove this address from the Mailing List', @recipient, :confirm => 'Are you sure?', :method => :delete %>
-<%= link_to 'Edit', edit_recipient_path(@recipient) %> |
+<%= form_tag("/recipients/#{@recipient.id}", :method => 'delete') %>
+  <p>
+    Email <%= text_field :form,:email %>
+  </p>
+    
+  <p>
+    <%= submit_tag 'Unsubscribe' %>
+  </p>
+<h3>I want to Edit My Mailing List Entry</h3>
+<%= link_to 'Edit', edit_recipient_path(@recipient) %><br>
 <%= link_to 'Back', root_path %>

@@ -24,7 +24,7 @@
 		<ul>
        		<li><%= link_to "Home", root_path %></li>
        		<li><%= link_to "About", about_path %></li>
-       		<li><%= link_to "Issues", issues_path %></li>
+       		<li><%= link_to "Issues", the_issues_path %></li>
 			<li><%= link_to "Volunteer", new_volunteer_path %></li>
        		<% if current_user %>
        			<li><%= link_to "Admin", admin_path %></li>
@@ -45,12 +45,14 @@
 		<div class="span-24" id="footer"> <!-- start footer -->
 			<% form_for(@recipient = Recipient.new) do |f| %>
   				<%= f.error_messages %>
-				<div class="span-2"><h5>Mailing List:</h5></div>
-				<div class="span-1">Email</div>
-			    <div class="span-4"><%= f.text_field :email, :size => 15 %></div>
-				<div class="span-1">Zip</div>
-			    <div class="span-2"><%= f.text_field :zip, :size => 8 %></div>
-				<div class="span-2 last"><%= f.submit 'Create' %></div>
+				<hr>
+				<div class="span-2"><h5>Mailing List:</h4></div>
+				<div class="span-10 last">
+				<%= f.label :email %>
+			    <%= f.text_field :email, :size => 15 %>
+				<%= f.label :zip %>
+			    <%= f.text_field :zip, :size => 6 %>
+				<%= f.submit 'Create' %></div>
 			<% end %>
 		</div>  <!-- end footer -->
 	</div>  <!-- end container -->
