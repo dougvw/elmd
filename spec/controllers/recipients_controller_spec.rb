@@ -50,7 +50,7 @@ describe RecipientsController do
       it "redirects to the created recipient" do
         Recipient.stub!(:new).and_return(mock_recipient(:save => true))
         post :create, :recipient => {}
-        response.should redirect_to(recipient_url(mock_recipient))
+        response.should redirect_to(root_path)
       end
     end
 
@@ -116,7 +116,7 @@ describe RecipientsController do
 
   describe "DELETE destroy" do
     it "destroys the requested recipient" do
-      Recipient.should_receive(:find).with("37").and_return(mock_recipient)
+      Recipient.should_receive(:find_by_email).with("test@example.com").and_return(mock_recipient)
       mock_recipient.should_receive(:destroy)
       delete :destroy, :id => "37"
     end

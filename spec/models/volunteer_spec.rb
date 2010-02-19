@@ -15,7 +15,7 @@ describe Volunteer do
       :token => "value for token",
       :active => false,
       :phone_calls => false,
-      :distribute_signs => ,
+      :distribute_signs => false,
       :write_letters => false,
       :host_event => false,
       :large_sign => false,
