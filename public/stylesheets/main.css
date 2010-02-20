@@ -56,25 +56,25 @@ div.accordion {
 div.accordion-toggle{  
     position: relative; /* required for effect */  
     z-index: 10;        /* required for effect */  
-    background: #3f3c38 url(../images/off.jpg) repeat-x;  
+    background: #385067 url(../images/issue_off.jpg) repeat-x;  
     background-position: bottombottom;  
     color: #fff;  
     cursor: pointer;  
     margin-bottom: 1px;  
     padding: 9px 14px 6px 14px;  
-    border-top: 1px solid #5d5852;  
+    border-top: 1px solid #385067;  
 }  
   
 div.accordion-toggle:hover, div.accordion-toggle-active{  
-    background-image: url(../images/on.jpg);  
-    background-color: #6d493a;  
-    border-top: 1px solid #a06b55;  
+    background-image: url(../images/issue_on.jpg);  
+    background-color: #a41d1d;  
+    border-top: 1px solid #a41d1d;  
 }  
   
 div.accordion-content{  
     overflow: hidden;   /* required for effect */  
-    background: #302e2c;  
-    color: #c4bab1;  
+    background: #000033;  
+    color: #fff;  
     border-bottom: 1px solid #000;  
 }  
   
