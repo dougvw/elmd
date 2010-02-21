@@ -14,6 +14,7 @@ two:
 
 three:
   title: Liberty
-  body: Liberty is good. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis.
+  body: <p></p><p>Liberty is good. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis.</p>
+<p>Yada, yada.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis. Yada, yada.</p>
   active: true
   order_number: 3

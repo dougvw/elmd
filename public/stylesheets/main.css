@@ -44,13 +44,14 @@ div.nav-space {
 /* --------- Accordian ----------- */
 div#test-accordion{  
     border: 1px solid #343230;  
-    background-color: #21201f;  
-    padding: 10px;  
+    background-color: #000033;  
+	padding: 10px;  
 }  
   
 div.accordion {  
-    position: relative; /* required for bounding */http://net.tutsplus.com/wp-admin/users.php  
+    position: relative; /* required for bounding */http://localhost  
     width: 800px;  
+	/*font-size: 1.2em;*/
 }  
   
 div.accordion-toggle{  
@@ -62,7 +63,8 @@ div.accordion-toggle{
     cursor: pointer;  
     margin-bottom: 1px;  
     padding: 9px 14px 6px 14px;  
-    border-top: 1px solid #385067;  
+    border-top: 1px solid #385067; 
+ 	font-size: 1.4em;
 }  
   
 div.accordion-toggle:hover, div.accordion-toggle-active{  
@@ -75,7 +77,9 @@ div.accordion-content{
     overflow: hidden;   /* required for effect */  
     background: #000033;  
     color: #fff;  
-    border-bottom: 1px solid #000;  
+	font-size: 1.1em;
+    border-bottom: 1px solid #000; 
+ 	margin-left:20px;
 }  
   
 div.accordion-content p{  

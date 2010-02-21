@@ -16,7 +16,8 @@ class PagesController < ApplicationController
   end
   
   def the_issues
-   @issues = Issue.active
+   @issues = Issue.find(:all, :conditions => 'active > 0', :order => "order_number ASC")
+   
   end
   
   def endorsements
