@@ -7,6 +7,32 @@ div.container {
 	/* background: transparent url(../images/elmd04.png) 0 0; */
 }
 
+div.header {
+background:#fff url(../images/header.png) 0 0 no-repeat;
+height:126px;
+min-height:126px;
+}
+
+div.navigation {
+	background:#fff;
+	height:39px;
+	min-height:39px;
+}
+
+div.l_corner {
+	background:#fff url(../images/l_corner.png) 0 0 no-repeat;
+	height:39px;
+	min-height:39px;
+	width:70px;
+}
+
+div.home {
+	background:#fff url(../images/home.png) 0 0 no-repeat;
+	height:39px;
+	min-height:39px;
+	width:134px;
+}
+
 div.main-header {
 	height: 300px;
 	
@@ -43,8 +69,8 @@ div.nav-space {
 
 /* --------- Accordian ----------- */
 div#test-accordion{  
-    border: 1px solid #343230;  
-    background-color: #000033;  
+    border: 1px solid #385067;  
+    background-color: #fff;  
 	padding: 10px;  
 }  
   
@@ -75,10 +101,10 @@ div.accordion-toggle:hover, div.accordion-toggle-active{
   
 div.accordion-content{  
     overflow: hidden;   /* required for effect */  
-    background: #000033;  
-    color: #fff;  
+    background: #fff;  
+    color: #000033;  
 	font-size: 1.1em;
-    border-bottom: 1px solid #000; 
+    border-bottom: 1px solid #fff; 
  	margin-left:20px;
 }  
   
