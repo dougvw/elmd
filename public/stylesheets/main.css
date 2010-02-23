@@ -2,7 +2,6 @@ body {
 /*	background: #fcc;*/
 }
 
-/* -------- Header Start ----------- */
 div.container {
 	/* background: transparent url(../images/elmd04.png) 0 0; */
 }
@@ -21,42 +20,29 @@ div.navigation {
 
 div.sub-header {
 	background:#fff url(../images/sub_header.png) 0 0 no-repeat;
-	height:39px;
-	min-height:39px;
+	height:34px;
+	min-height:34px;
 }
-div.main-header {
-	height: 300px;
-	
-/*	color: #fff;*/
-/*	background: #ccc; */
-	}
+div.content_bg {
+	background:#FFFFFF url(../images/content.png) repeat-y scroll 0 0;
+}
 
+div.footer {
+	background:#fff url(../images/footer.png) 0 0 no-repeat;
+	height:107px;
+	min-height:107px;
+}
+/*
 #header h1, h2, h3 {
 	color: #fff;
 }
-
-div.header-sub {
-	height: 20px;  
-/*	background: #fff; */
-}
-
-div.header-name {
-	margin-top: 32px;
-
-/*	background: #fff;*/
-	text-align: right;
-}
-div.nav-space {
-	height: 17px;
-}
-
-#nav-buttons {
+*/
+/*#nav-buttons {
 	color: #fff;
 	font-size: 1.8em;
 	text-align: center;
 }
-
-/* -------- Header End ----------- */
+*/
 
 /* --------- Accordian ----------- */
 div#test-accordion{  

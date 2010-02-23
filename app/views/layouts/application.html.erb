@@ -22,41 +22,47 @@
 	<div class="container showgrid">
 		<div class="span-24 header"></div>
 		<div class="span-24 navigation">
+			<div class="span-3 prepend-3 home"><%= link_to "Home", root_path %></div>
+			<div class="span-3 about"><%= link_to "About", about_path %></div>
+			<div class="span-3 issues"><%= link_to "Issues", the_issues_path %></div>
+			<div class="span-3 volunteer"><%= link_to "Volunteer", new_volunteer_path %></div>
+			<div class="span-3 contribute"><%= link_to "Contribute", root_path %></div>
+			<div class="span-3 last contact"><%= link_to "Contact", root_path %></div>
 		</div>
 		<div class="span-24 sub-header"></div>
 		
-		<ul>
-       		<li><%= link_to "Home", root_path %></li>
-       		<li><%= link_to "About", about_path %></li>
-       		<li><%= link_to "Issues", the_issues_path %></li>
-			<li><%= link_to "Volunteer", new_volunteer_path %></li>
-       		<% if current_user %>
-       			<li><%= link_to "Admin", admin_path %></li>
-       			<li><%= link_to "Logout", logout_path %></li>
-       		<% else -%>
-       			<li><%= link_to "Login", login_path %></li>
-       			<% end %>
-		</ul>
+		<div class="span-24 content_bg">   <!-- content start -->
+		<div id="content" class="span-20 prepend-2 append-2">
+			<!-- <ul>
+			       		<% if current_user %>
+			       			<li><%= link_to "Admin", admin_path %></li>
+			       			<li><%= link_to "Logout", logout_path %></li>
+			       		<% else -%>
+			       			<li><%= link_to "Login", login_path %></li>
+			       			<% end %>
+					</ul> -->
 
-		<div class="span-24">
-			<% if flash[:notice] %><div class="success"><%= flash[:notice] %></div> <% end %>
-			<% if flash[:error] %><div class="error"><%= flash[:error] %></div> <% end %>
-			<% if flash[:info] %><div class="notice"><%= flash[:info] %></div> <% end %>
-		</div>  
-		<div class="span-24 content">
+			<div class="span-20 last">
+				<% if flash[:notice] %><div class="success"><%= flash[:notice] %></div> <% end %>
+				<% if flash[:error] %><div class="error"><%= flash[:error] %></div> <% end %>
+				<% if flash[:info] %><div class="notice"><%= flash[:info] %></div> <% end %>
+			</div>  
+		
 			<%= yield %>
 		</div>
-		<div class="span-24" id="footer"> <!-- start footer -->
+		</div>  <!-- content end -->
+		
+		<div class="span-24 footer"> <!-- start footer -->
 			<% form_for(@recipient = Recipient.new) do |f| %>
   				<%= f.error_messages %>
-				<hr>
-				<div class="span-2"><h5>Mailing List:</h4></div>
-				<div class="span-10 last">
-				<%= f.label :email %>
+				<div id="facebook" class="span-1  prepend-8"><img src="/images/facebook.png"
+				</div>
+				<div class="span-1 "><img src="/images/twitter.png"
+				</div>
+				<div class="span-9 prepend-4">
 			    <%= f.text_field :email, :size => 15 %>
-				<%= f.label :zip %>
 			    <%= f.text_field :zip, :size => 6 %>
-				<%= f.submit 'Create' %></div>
+				<%= f.submit 'Add Me to the List' %></div>
 			<% end %>
 		</div>  <!-- end footer -->
 	</div>  <!-- end container -->
