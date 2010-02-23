@@ -14,25 +14,16 @@ min-height:126px;
 }
 
 div.navigation {
-	background:#fff;
+	background:#fff url(../images/navigation.png) 0 0 no-repeat;
 	height:39px;
 	min-height:39px;
 }
 
-div.l_corner {
-	background:#fff url(../images/l_corner.png) 0 0 no-repeat;
+div.sub-header {
+	background:#fff url(../images/sub_header.png) 0 0 no-repeat;
 	height:39px;
 	min-height:39px;
-	width:70px;
 }
-
-div.home {
-	background:#fff url(../images/home.png) 0 0 no-repeat;
-	height:39px;
-	min-height:39px;
-	width:134px;
-}
-
 div.main-header {
 	height: 300px;
 	
