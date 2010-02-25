@@ -1,5 +1,5 @@
 body {
-/*	background: #fcc;*/
+	background-image:url('../images/star_patt.jpg');
 }
 
 div.container {
@@ -18,6 +18,30 @@ div.navigation {
 	min-height:39px;
 }
 
+#nav_titles ul {
+	display:inline;
+	left:40px;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+
+#nav_titles li {
+	float:left;
+	margin:0 12px;
+}
+
+#nav_titles li a{
+	color:#FFFFFF;
+	display:block;
+	font-family:trebuchet ms,verdana,arial,helvetica,sans-serif;
+	font-size:1.8em;
+	/*font-weight:bold;*/
+	height:44px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
 div.sub-header {
 	background:#fff url(../images/sub_header.png) 0 0 no-repeat;
 	height:34px;
@@ -31,6 +55,19 @@ div.footer {
 	background:#fff url(../images/footer.png) 0 0 no-repeat;
 	height:107px;
 	min-height:107px;
+}
+
+#facebook {
+	padding-top: 23px;
+}
+
+#twitter {
+	padding-top: 23px;
+	padding-left: 10px;
+}
+
+#email_form {
+	padding-top: 28px;
 }
 /*
 #header h1, h2, h3 {

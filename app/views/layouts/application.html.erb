@@ -21,13 +21,17 @@
 <body>
 	<div class="container showgrid">
 		<div class="span-24 header"></div>
-		<div class="span-24 navigation">
-			<div class="span-3 prepend-3 home"><%= link_to "Home", root_path %></div>
-			<div class="span-3 about"><%= link_to "About", about_path %></div>
-			<div class="span-3 issues"><%= link_to "Issues", the_issues_path %></div>
-			<div class="span-3 volunteer"><%= link_to "Volunteer", new_volunteer_path %></div>
-			<div class="span-3 contribute"><%= link_to "Contribute", root_path %></div>
-			<div class="span-3 last contact"><%= link_to "Contact", root_path %></div>
+		<div id="nav_titles" class="span-24 navigation">
+			<div class = "span-20 prepend-3 last">
+			<ul>
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "About", about_path %></li>
+				<li><%= link_to "Issues", the_issues_path %></li>
+				<li><%= link_to "Volunteer", new_volunteer_path %></li>
+				<li><%= link_to "Contact", root_path %></li>
+				<li><%= link_to "Contribute", root_path %></li>
+			</ul>
+			</div>
 		</div>
 		<div class="span-24 sub-header"></div>
 		
@@ -55,11 +59,11 @@
 		<div class="span-24 footer"> <!-- start footer -->
 			<% form_for(@recipient = Recipient.new) do |f| %>
   				<%= f.error_messages %>
-				<div id="facebook" class="span-1  prepend-8"><img src="/images/facebook.png"
+				<div id="facebook" class="span-1  prepend-8"><img src="/images/facebook.png">
 				</div>
-				<div class="span-1 "><img src="/images/twitter.png"
+				<div id="twitter" class="span-1"><img src="/images/twitter.png">
 				</div>
-				<div class="span-9 prepend-4">
+				<div id="email_form" class="span-10 prepend-3">
 			    <%= f.text_field :email, :size => 15 %>
 			    <%= f.text_field :zip, :size => 6 %>
 				<%= f.submit 'Add Me to the List' %></div>
