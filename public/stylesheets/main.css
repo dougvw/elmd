@@ -71,6 +71,14 @@ div.footer {
 #email_form {
 	padding-top: 28px;
 }
+
+div.colborder {
+	border-right:1px solid #AAAAAA;
+}
+
+hr {
+	color:#444444;
+}
 /*
 #header h1, h2, h3 {
 	color: #fff;
