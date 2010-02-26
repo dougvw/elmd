@@ -1,20 +1,16 @@
 <p>
-  <b>Title:</b>
-  <%=h @issue.title %>
+  <h2><%=h @issue.title %></h2>
+  
 </p>
 
 <p>
-  <b>Body:</b>
-  <%=h @issue.body %>
+  <%= @issue.body %>
 </p>
-
+<hr>
 <p>
-  <b>Active:</b>
-  <%=h @issue.active %>
-</p>
-<p>
-  <b>Order Number:</b>
-  <%=h @issue.order_number %>
+  <b>Active:</b> <%=h @issue.active %>
+<br>
+  <b>Order Number:</b> <%=h @issue.order_number %>
 </p>
 
 

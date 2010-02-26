@@ -1,5 +1,5 @@
 body {
-	background-image:url('../images/star_patt.jpg');
+	background-image:url('../images/star_patt_red.jpg');
 }
 
 div.container {
@@ -20,7 +20,7 @@ div.navigation {
 
 #nav_titles ul {
 	display:inline;
-	left:40px;
+/*	left:40px;*/
 	list-style-image:none;
 	list-style-position:outside;
 	list-style-type:none;
@@ -28,18 +28,20 @@ div.navigation {
 
 #nav_titles li {
 	float:left;
-	margin:0 12px;
+	/*margin:0 12px;*/
 }
 
 #nav_titles li a{
 	color:#FFFFFF;
 	display:block;
 	font-family:trebuchet ms,verdana,arial,helvetica,sans-serif;
-	font-size:1.8em;
+	font-size:1.5em;
 	/*font-weight:bold;*/
-	height:44px;
+/*	height:44px;*/
 	text-decoration:none;
 	text-transform:uppercase;
+	padding-top: 6px;
+	width:115px;
 }
 
 div.sub-header {

@@ -11,7 +11,7 @@
 <% @issues.each do |issue| %>
   <tr>
     <td><%=h issue.title %></td>
-    <td><%=h truncate(issue.body) %></td>
+    <td><%= truncate(issue.body, :length => 50) %></td>
     <td><%=h issue.active %></td>
 	<td><%= h issue.order_number %></td>
     <td><%= link_to 'Show', issue %></td>
