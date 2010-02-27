@@ -7,12 +7,12 @@
   <title>EricLarson2010</title>
 
   <!-- Framework CSS -->
-  <%= stylesheet_link_tag 'blueprint/screen', 'screen', :cache => "screen-all" %>
-  <!--[if IE]>
-    <%= stylesheet_link_tag 'blueprint/ie', 'ie', :cache => "ie-all" %>
-  <![endif]-->
-  <%= stylesheet_link_tag 'blueprint/print', 'print', :media => "print", :cache => "ie-print" %>
-  <%= stylesheet_link_tag 'blueprint/plugins/fancy-type/screen', 'screen', :media => "screen, projection"%>
+    <link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print">
+    <!--[if lt IE 8]><link rel="stylesheet" href="/stylesheets/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+    <!-- Import fancy-type plugin for the sample page. -->
+    <link rel="stylesheet" href="/stylesheets/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
   <%= stylesheet_link_tag 'main', 'main' %>
   <%= javascript_include_tag :defaults %>
   <% if controller.controller_name == "issues" %>
