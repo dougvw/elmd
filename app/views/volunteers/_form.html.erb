@@ -1,102 +1,114 @@
-	<div class="column span-4">
-		<%= form.label :first_name %>
+
+<div class="span-8 left_box">  <!-- left box start-->
+
+	<div id="left_label" class="span-2">
+		<label for="volunteer_email">Email :</label>
 	</div>
-	<div class="column span-8 last">
-		<%= form.text_field :first_name %>
-	</div>
-	<div class="column span-4">
-		<%= form.label :last_name %>
-	</div>
-	<div class="column span-8 last">
-		<%= form.text_field :last_name %>
-	</div>
-	<div class="column span-4">
-		<%= form.label :address_line1 %>
-	</div>
-	<div class="column span-8 last">
-		<%= form.text_field :address_line1 %>
-	</div>
-	<div class="column span-4">
-		<%= form.label :address_line2 %>
-	</div>
-	<div class="column span-8 last">
-		<%= form.text_field :address_line2 %>
-	</div>
-	<div class="column span-4">
-		<%= form.label :city %>
-	</div>
-	<div class="column span-8 last">
-		<%= form.text_field :city %>
-	</div>
-	<div class="column span-4">
-		<%= form.label :state %>
-	</div>
-	<div class="column span-8 last">
-		<%= form.text_field :state %>
-	</div>
-	<div class="column span-4">
-		<%= form.label :zip %>
-	</div>
-	<div class="column span-8 last">
-		<%= form.text_field :zip %>
-	</div>
-	<div class="column span-4">
-		<%= form.label :phone %>
-	</div>
-	<div class="column span-8 last">
-		<%= form.text_field :phone %>
-	</div>
-	<div class="column span-4">
-		<%= form.label :email %>
-	</div>
-	<div class="column span-8 last">
+	<div id="left_input" class="span-4 append-1 last">
 		<%= form.text_field :email %>
 	</div>
-	<div class="column span-4">
-		<%= form.label :phone_calls %>
+	<div id="left_label" class="span-2">
+		<label for="volunteer_first_name">First Name :</label>
 	</div>
-	<div class="column span-8 last">
-		<%= form.check_box :phone_calls %>
+	<div id="left_input" class="span-4 append-1 last">
+		<%= form.text_field :first_name %>
 	</div>
-	<div class="column span-4">
-		<%= form.label :distribute_signs %>
+	<div id="left_label" class="span-2">
+		<label for="volunteer_last_name">Last Name :</label>
 	</div>
-	<div class="column span-8 last">
+	<div id="left_input" class="span-4 append-1 last">
+		<%= form.text_field :last_name %>
+	</div>
+	<div id="left_label" class="span-2">
+		<label for="volunteer_address_line1">Address :</label>
+	</div>
+	<div id="left_input" class="span-4 append-1 last">
+			<%= form.text_field :address_line1 %>
+		</div>
+	<div id="left_label" class="span-2">
+		<label for="volunteer_address_line2">Address 2 :</label>
+	</div>	
+	<div id="left_input" class="span-4 append-1 last">
+		<%= form.text_field :address_line2 %>
+	</div> 				
+	<div id="left_label" class="span-2">
+		<label for="volunteer_city">City :</label>
+	</div>
+	<div id="left_input" class="span-4 append-1 last">
+		<%= form.text_field :city %>
+	</div>
+	<div id="left_label" class="span-2">
+		<label for="volunteer_state">State :</label>
+	</div>
+	<div id="left_input" class="span-4 append-1 last">
+		<%= form.text_field :state %>
+	</div>
+	<div id="left_label" class="span-2">
+		<label for="volunteer_zip">Zip :</label>
+	</div>
+	<div id="left_input" class="span-4 append-1 last">
+		<%= form.text_field :zip, :size => 6 %>
+	</div>
+	<div id="left_label" class="span-2">
+		<label for="volunteer_phone">Phone :</label>
+	</div>
+	<div id="left_input" class="span-4 append-1 last">
+		<%= form.text_field :phone, :size => 15 %>
+	</div>
+
+</div>  <!-- left box end -->
+
+<div class="span-8 prepend-2 last right_box"> <!-- right box -->
+	
+	<h3>I would like to help with :</h3>
+	
+	<div id="right_label" class="span-3">
+		<label for="volunteer_phone">Phone Calls:</label>
+	</div>
+	<div id="right_input" class="span-4 append-1 last">
+		<%= form.check_box :phone_calls %><br>
+	</div>
+	<div id="right_label" class="span-3">
+		<label for="volunteer_distribute_signs">Distributing Signs :</label>
+	</div>
+	<div id="right_input" class="span-4 append-1 last">
 		<%= form.check_box :distribute_signs %>
 	</div>
-	<div class="column span-4">
-		<%= form.label :write_letters %>
+	<div id="right_label" class="span-3">
+		<label for="volunteer_write_letters">Writing Letters :</label>
 	</div>
-	<div class="column span-8 last">
+	<div id="right_input" class="span-4 append-1 last">
 		<%= form.check_box :write_letters %>
 	</div>
-	<div class="column span-4">
-		<%= form.label :host_event %>
+	<div id="right_label" class="span-3">
+		<label for="volunteer_host_event">Host an Event :</label>
 	</div>
-	<div class="column span-8 last">
+	<div id="right_input" class="span-4 append-1 last">
 		<%= form.check_box :host_event %>
 	</div>
-	<div class="column span-4">
-		<%= form.label :large_sign %>
+	<div id="right_label" class="span-3">
+		<label for="volunteer_large_sign">Large Sign :</label>
 	</div>
-	<div class="column span-8 last">
+	<div id="right_input" class="span-4 append-1 last">
 		<%= form.check_box :large_sign %>
 	</div>
-	<div class="column span-4">
-		<%= form.label :yard_sign %>
+	<div id="right_label" class="span-3">
+		<label for="volunteer_yard_sign">Yard Sign :</label>
 	</div>
-	<div class="column span-8 last">
+	<div id="right_input" class="span-4 append-1 last">
 		<%= form.check_box :yard_sign %>
 	</div>
-	<div class="column span-4">
-		<%= form.label :office_help %>
+	<div id="right_label" class="span-3">
+		<label for="volunteer_office_help">Office Help :</label>
 	</div>
-	<div class="column span-8 last">
+	<div id="right_input" class="span-4 append-1 last">
 		<%= form.check_box :office_help %>
 	</div>
-	<div class="column span-4">
-		<%= form.label :other %>
+	<div id="right_label" class="span-3">
+		<label for="volunteer_other">Other :</label>
 	</div>
-	<div class="column span-8 last">
-		<%= form.text_field :other %>
+	<div id="right_input" class="span-4 append-1 last">
+		<%= form.text_field :other, :size => 25 %>
 	</div>
+</div> <!-- right box end -->
+

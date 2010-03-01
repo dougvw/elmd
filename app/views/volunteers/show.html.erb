@@ -1,98 +1,103 @@
-<p>
-  <b>First name:</b>
-  <%=h @volunteer.first_name %>
-</p>
+<div class="span-16 prepend-2">
+	<hr>
+	<div class="span-12 last">
+		<b>First name:</b>
+		<%=h @volunteer.first_name %>
+	</div>
+	<div class="span-12 last">
+		<b>Last name:</b>
+		<%=h @volunteer.last_name %>
+	</div>
 
-<p>
-  <b>Last name:</b>
-  <%=h @volunteer.last_name %>
-</p>
+	<div class="span-12 last">
+		<b>Address line1:</b>
+		<%=h @volunteer.address_line1 %>
+	</div>
 
-<p>
-  <b>Address line1:</b>
-  <%=h @volunteer.address_line1 %>
-</p>
+	<div class="span-12 last">
+		<b>Address line2:</b>
+		<%=h @volunteer.address_line2 %>
+	</div>
 
-<p>
-  <b>Address line2:</b>
-  <%=h @volunteer.address_line2 %>
-</p>
+	<div class="span-12 last">
+		<b>City:</b>
+		<%=h @volunteer.city %>
+	</div>
 
-<p>
-  <b>City:</b>
-  <%=h @volunteer.city %>
-</p>
+	<div class="span-12 last">
+		<b>State:</b>
+		<%=h @volunteer.state %>
+	</div>
 
-<p>
-  <b>State:</b>
-  <%=h @volunteer.state %>
-</p>
+	<div class="span-12 last">
+		<b>Zip:</b>
+		<%=h @volunteer.zip %>
+	</div>
 
-<p>
-  <b>Zip:</b>
-  <%=h @volunteer.zip %>
-</p>
+	<div class="span-12 last">
+		<b>Phone:</b>
+		<%=h @volunteer.phone %>
+	</div>
 
-<p>
-  <b>Phone:</b>
-  <%=h @volunteer.phone %>
-</p>
+	<div class="span-12 last">
+		<b>Email:</b>
+		<%=h @volunteer.email %>
+	</div>
 
-<p>
-  <b>Email:</b>
-  <%=h @volunteer.email %>
-</p>
+	<div class="span-12 last">
+		<b>Token:</b>
+		<%=h @volunteer.token %>
+	</div>
 
-<p>
-  <b>Token:</b>
-  <%=h @volunteer.token %>
-</p>
+	<div class="span-12 last">
+		<b>Active:</b>
+		<%=h @volunteer.active %>
+	</div>
 
-<p>
-  <b>Active:</b>
-  <%=h @volunteer.active %>
-</p>
+	<div class="span-12 last">
+		<b>Phone calls:</b>
+		<%=h "Yes" if @volunteer.phone_calls %>
+	</div>
 
-<p>
-  <b>Phone calls:</b>
-  <%=h @volunteer.phone_calls %>
-</p>
+	<div class="span-12 last">
+		<b>Distribute signs:</b>
+		<%=h "Yes" if @volunteer.distribute_signs %>
+	</div>
 
-<p>
-  <b>Distribute signs:</b>
-  <%=h @volunteer.distribute_signs %>
-</p>
+	<div class="span-12 last">
+		<b>Write letters:</b>
+		<%=h "Yes" if @volunteer.write_letters %>
+	</div>
 
-<p>
-  <b>Write letters:</b>
-  <%=h @volunteer.write_letters %>
-</p>
+	<div class="span-12 last">
+		<b>Host event:</b>
+		<%=h "Yes" if @volunteer.host_event %>
+	</div>
 
-<p>
-  <b>Host event:</b>
-  <%=h @volunteer.host_event %>
-</p>
+	<div class="span-12 last">
+		<b>Large sign:</b>
+		<%=h "Yes" if @volunteer.large_sign %>
+	</div>
 
-<p>
-  <b>Large sign:</b>
-  <%=h @volunteer.large_sign %>
-</p>
+	<div class="span-12 last">
+		<b>Yard sign:</b>
+		<%=h "Yes" if @volunteer.yard_sign %>
+	</div>
 
-<p>
-  <b>Yard sign:</b>
-  <%=h @volunteer.yard_sign %>
-</p>
+	<div class="span-12 last">
+		<b>Office help:</b>
+		<%=h "Yes" if @volunteer.office_help %>
+	</div>
 
-<p>
-  <b>Office help:</b>
-  <%=h @volunteer.office_help %>
-</p>
+	<div class="span-12 last">
+		<b>Other:</b>
+		<%=h @volunteer.other %>
+	</div>
 
-<p>
-  <b>Other:</b>
-  <%=h @volunteer.other %>
-</p>
-
-
-<%= link_to 'Edit', edit_volunteer_path(@volunteer) %> |
-<%= link_to 'Back', volunteers_path %>
+	<div class="span-12 last">
+		<br>
+		<hr>
+		<%= link_to 'Edit', edit_volunteer_path(@volunteer) %> |
+		<%= link_to 'Back', volunteers_path %>
+	</div>
+</div>

@@ -2,11 +2,37 @@ class VolunteersController < ApplicationController
   # GET /volunteers
   # GET /volunteers.xml
   def index
-    @volunteers = Volunteer.all
+    @volunteers = Volunteer.all(:all, :order => "created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @volunteers }
+      format.csv do
+          csv_string = FasterCSV.generate do |csv|          
+            # header row
+            header_row = Volunteer.column_names
+            header_row.delete("id")
+            #header_row.delete("token")
+            csv << header_row
+            # data rows
+            @volunteers.each do |volunteer|
+              csvRow = Array.new
+              header_row.each do |field|
+                unless (field == "id") #|| (field == "token")
+                  csvRow << volunteer[field]
+                end
+              end           
+              csv << csvRow
+            end          
+          end
+            date = Date.today
+            filename = "Volunteer_List_" + date.to_s + ".csv"
+            # send it to the browsah
+            send_data(csv_string,
+            :type => 'text/csv; charset=iso-8859-1; header=present',
+            :disposition => "attachment",
+            :filename => filename)
+        end # end format.csv
     end
   end
 

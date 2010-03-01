@@ -1,16 +1,16 @@
-<div class="column span-12 append-6 prepend-6 last">
+<div class="column span-18 prepend-1 append-1 last">
 
-	<h1>New volunteer</h1>
+	<h2>Volunteer Signup :</h2>
 
 	<% form_for(@volunteer) do |f| %>
 	<%= f.error_messages %>
 	
 	<%= render f %>
-
-	<div class="column span-8 prepend-4 last">
-		<%= f.submit 'Submit' %>
-	</div>
+	
+	<div class="span-13 prepend-5 last">
+	<br>
+	<%= f.submit 'Submit' %>
 	<% end %>
-
-	<%= link_to 'Back', root_path %>
+	
+	</div>
 </div>

@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-   
+    @posts = Post.find(:all, :limit => 3 , :order => "created_at DESC")
   end
 
   def admin

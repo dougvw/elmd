@@ -12,13 +12,13 @@ class RecipientsController < ApplicationController
             # header row
             header_row = Recipient.column_names
             header_row.delete("id")
-            header_row.delete("token")
+            #header_row.delete("token")
             csv << header_row
             # data rows
             @recipients.each do |recipient|
               csvRow = Array.new
               header_row.each do |field|
-                unless (field == "id") || (field == "token")
+                unless (field == "id") #|| (field == "token")
                   csvRow << recipient[field]
                 end
               end           

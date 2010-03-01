@@ -48,7 +48,7 @@
 			       			<% end %>
 					</ul> -->
 
-			<div class="span-20 last">
+			<div id="flash" class="span-20 last">
 				<% if flash[:notice] %><div class="success"><%= flash[:notice] %></div> <% end %>
 				<% if flash[:error] %><div class="error"><%= flash[:error] %></div> <% end %>
 				<% if flash[:info] %><div class="notice"><%= flash[:info] %></div> <% end %>
@@ -59,12 +59,12 @@
 		</div>  <!-- content end -->
 		
 		<div class="span-24 footer"> <!-- start footer -->
+			<div id="facebook" class="span-1  prepend-8"><img src="/images/facebook.png">
+			</div>
+			<div id="twitter" class="span-1"><img src="/images/twitter.png">
+			</div>
 			<% form_for(@recipient = Recipient.new) do |f| %>
   				<%= f.error_messages %>
-				<div id="facebook" class="span-1  prepend-8"><img src="/images/facebook.png">
-				</div>
-				<div id="twitter" class="span-1"><img src="/images/twitter.png">
-				</div>
 				<div id="email_form" class="span-10 prepend-3">
 			    <%= f.text_field :email, :size => 15 %>
 			    <%= f.text_field :zip, :size => 6 %>

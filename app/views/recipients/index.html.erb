@@ -1,11 +1,11 @@
-<h1>Mailing List</h1>
+<div class="span-18 last">
+<h2>Mailing List Recipients</h2>
 
 <table>
 	<tr>
 		<th>Email</th>
 		<th>First</th>
 	 	<th>Last</th>
-		<th>Address</th>
 		<th>City</th>
 		<th>State</th>
 		<th>Zip</th>
@@ -19,7 +19,6 @@
 	<td><%= mail_to recipient.email, recipient.email %></td>
 	<td><%= h recipient.first_name %></td>
  	<td><%= h recipient.last_name %></td>
-    <td><%= h recipient.address_line1 %></td>
 	<td><%= h recipient.city %></td>
 	<td><%= h recipient.state %></td>
 	<td><%= h recipient.zip %></td>
@@ -36,3 +35,4 @@
 <br />
 <br>
 <%= link_to 'Export Mailing List', recipients_path + ".csv"%>
+</div>

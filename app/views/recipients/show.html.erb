@@ -1,6 +1,9 @@
+<h3>I want to Edit My Mailing List Entry :</h3>
+<%= button_to 'Edit', edit_recipient_path(@recipient) %><br>
+<hr>
 <h3>I want to Unsubscribe:</h3>
 
-We respect your privacy, please enter you email address to unsubscribe.
+<h5>We respect your privacy, please enter you email address to unsubscribe.</h5>
 
 <%= form_tag("/recipients/#{@recipient.id}", :method => 'delete') %>
   <p>
@@ -10,6 +13,5 @@ We respect your privacy, please enter you email address to unsubscribe.
   <p>
     <%= submit_tag 'Unsubscribe' %>
   </p>
-<h3>I want to Edit My Mailing List Entry</h3>
-<%= link_to 'Edit', edit_recipient_path(@recipient) %><br>
+
 <%= link_to 'Back', root_path %>

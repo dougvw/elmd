@@ -77,8 +77,36 @@ div.colborder {
 }
 
 hr {
-	color:#444444;
+	color:#AAAAAA;
+	background:#AAAAAA none repeat scroll 0 0;
 }
+
+#left_label {
+	padding-top: .5em;
+}
+
+#right_label {
+	padding-top: .4em;
+	height: 25px;
+}
+
+#right_input {
+	padding-top: .4em;
+	height: 25px;
+}
+
+#errorExplanation {
+	border: 2px solid #a41d1d;
+	padding: 4px;
+}
+div.right_box {
+/*	background: #ccc;*/
+}
+
+div.left_box {
+/*	background: #ccc;*/
+}
+
 /*
 #header h1, h2, h3 {
 	color: #fff;
