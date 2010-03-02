@@ -1,20 +1,39 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: Big Government
-  body: Big Government is Bad.  Really bad. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis.
+  title: Economy
+  body: <p></p><p>Without a doubt, Michigan's economy is a mess. We rank last in most categories of job growth, income, and business environment. The trouble we find ourselves in has been in motion for a long time. Despite signs to the contrary, we never allowed our state's economy to be diversified properly throughout the 80s and 90s leaving us more and more dependent on the health of the automotive industry. We continued to offer special protection for the auto and manufacturing industry with special tax breaks and expected other businesses and taxpayers to pick up the slack. This set us up for the eventual collapse that we have seen in the past five years.</p><p>It's time for a change in Lansing. We need to stop favoring certain industries/businesses at the expense of others. It is not the government's proper role to choose winners and losers in the economy. That is the role properly left to the free market which has proven time and again to allocate resources more efficiently than any 5-year government plan ever could.</p><p>Specifically, we need to end the Michigan Economic Development Corporation (MEDC/MEGA) which has been proven in two studies to have produced no benefit to the state. It has only served to artificially shift the composition of our businesses by favoring certain ones and punishing others. This form of crony capitalism rewards the politically connected businesses usually at the expense of small businesses. This practice needs to come to an end.</p> 
   active: true
   order_number: 1
 
 two:
-  title: Transparency
-  body: Sunlight is the best disinfectant. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis.
+  title: Government Spending
+  body: <p>Our state's budget needs to be addressed. However, the deficits plaguing our state are not the result of too little revenue, rather, too much spending. We need to seriously look at every aspect of the budget and enact significant and sensible spending reductions.</p> 
+
   active: true
   order_number: 2
 
 three:
-  title: Liberty
-  body: <p></p><p>Liberty is good. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis.<p></p>Yada, yada.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel sem eu justo congue viverra in vel elit. Integer a eleifend dui. Cras vulputate magna metus. Sed at sem massa, in pellentesque neque. Aenean at arcu lacus, sit amet tincidunt turpis. Yada, yada.</p>
+  title: Transparency
+  body: <p></p><p>I pledge to read every bill I support and keep my district as up-to-date on legislation as well as my positions of support or opposition to the bills. I will work to improve transparency at every level of the state government which is important to improve accountability. I will not accept life time benefits and work to end the practice.</p>
   active: true
   order_number: 3
+  
+four:
+  title: Part-time Legislature
+  body: <p></p><p>I will work to change our legislature from a full time legislature to part-time. Already, we have the second highest pay in the country (California is first) and are last in economic growth. Texas, a state larger in size and population only meets a few months every other year. We need a part time legislature to keep lawmakers focused on truly important issues and to force them to spend time away from Lansing and living under the laws they pass.</p>
+  active: true
+  order_number: 4
+  
+five:
+  title: Pro-life
+  body: <p></p><p>I am committed to protecting the rights of human life from conception.</p>
+  active: true
+  order_number: 5
+  
+six:
+  title: Gun Rights
+  body: <p></p><p>I unequivocally support the second amendment and the right for the citizens to bear arms.</p>
+  active: true
+  order_number: 6
   
