@@ -1,0 +1,63 @@
+<div class="span-8 left_box">  <!-- left box start-->
+	
+	<h4>(only email address and zip code are required)</h4>
+	
+	<div id="left_label" class="span-2">
+		<label for="recipient_email">Email :</label>
+	</div>
+	<div id="left_input" class="span-4 append-1 last">
+		<%= form.text_field :email %>
+	</div>
+	<div id="left_label" class="span-2">
+		<label for="recipient_zip">Zip Code :</label>
+	</div>
+	<div id="left_input" class="span-4 append-1 last">
+		 <%= form.text_field :zip, :size => 6 %>
+	</div>
+	
+</div>  <!-- left box end --> 
+
+
+<div class="span-8 prepend-2 last right_box"> <!-- right box -->
+	
+	<h4>(optional)</h4>
+	
+	<div id="right_label" class="span-3">
+		<label for="recipient_first_name">First Name :</label>
+	</div>
+	<div id="right_input" class="span-4 append-1 last">
+		<%= form.text_field :first_name %>
+	</div>
+	<div id="right_label" class="span-3">
+		<label for="recipient_last_name">Last Name :</label>
+	</div>
+	<div id="right_input" class="span-4 append-1 last">
+		<%= form.text_field :last_name %>
+	</div>
+	<div id="right_label" class="span-3">
+		<label for="recipient_address_line1">Address :</label>
+	</div>
+	<div id="right_input" class="span-4 append-1 last">
+		<%= form.text_field :address_line1 %>
+	</div>
+	<div id="right_label" class="span-3">
+		<label for="recipient_address_line2">Address 2 :</label>
+	</div>
+	<div id="right_input" class="span-4 append-1 last">
+		<%= form.text_field :address_line2 %>
+	</div>
+	<div id="right_label" class="span-3">
+		<label for="recipient_city">City :</label>
+	</div>
+	<div id="right_input" class="span-4 append-1 last">
+		<%= form.text_field :city %>
+	</div>
+	<div id="right_label" class="span-3">
+		<label for="recipient_state">State :</label>
+	</div>
+	<div id="right_input" class="span-4 append-1 last">
+		<%= form.text_field :state %>
+	</div>
+	
+</div> <!-- right box end -->
+

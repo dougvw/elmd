@@ -53,6 +53,10 @@ div.content_bg {
 	background:#FFFFFF url(../images/content.png) repeat-y scroll 0 0;
 }
 
+#site_content {
+	font-size: 1.2em;
+}
+
 div.footer {
 	background:#fff url(../images/footer.png) 0 0 no-repeat;
 	height:107px;
@@ -155,7 +159,7 @@ div.accordion-content{
     overflow: hidden;   /* required for effect */  
     background: #fff;  
     color: #000033;  
-	font-size: 1.1em;
+	font-size: 1.2em;
     border-bottom: 1px solid #fff; 
  	margin-left:20px;
 }  

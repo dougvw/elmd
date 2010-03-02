@@ -55,6 +55,9 @@ class RecipientsController < ApplicationController
   # GET /recipients/new.xml
   def new
     @recipient = Recipient.new
+    if params[:email]
+      @recipient.email = params[:email]
+    end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -117,5 +120,9 @@ class RecipientsController < ApplicationController
         format.xml  { render :xml => "nono", :status => :unprocessable_entity }
       end
     end
+  end
+  
+  def mailing_list
+    redirect_to :action => 'new', :email => params[:email]
   end
 end
