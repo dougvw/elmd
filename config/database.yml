@@ -17,14 +17,18 @@ test:
 
 production:
   adapter: mysql
-  database: elmd_production_master
-  username: dougv
-  password: 
-  host: 127.0.0.1
+  database: elmd_production
+  username: elmd
+  password: $sf32alk!
+  host: elmd-production.ericlarson2010.com
+  #"eltigre:fraklin" MySQL Server
+  # mysql -u elmd -p -h elmd-production.ericlarson2010.com elmd_production   
   
 staging:
   adapter: mysql
-  database: elmd_staging_master
-  username: dougv
-  password: 
-  host: 127.0.0.1
+  database: elmd_staging
+  username: elmd
+  password: $sf32alk!
+  host: mysql-staging.ericlarson2010.com
+  #"eltigre:fraklin" MySQL Server
+  #MySQL hostname "mysql-staging.ericlarson2010.com"

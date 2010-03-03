@@ -1,2 +1,26 @@
-<h1>Pages#admin</h1>
-<p>Find me in app/views/pages/admin.html.erb</p>
+<div class="span-16 prepend-2 append-2 last">
+<h2>Administration Page</h2>
+
+
+<dl>
+  <dt><%= link_to 'Issues', issues_path %></dt>
+  <dd>manage the issues page</dd>	
+
+  <dt><%= link_to 'Posts', posts_path %></dt>
+  <dd>manage news posts</dd>	
+
+  <dt><%= link_to 'Email List', recipients_path %></dt>
+  <dd>manage the mailing list</dd>	
+
+  <dt><%= link_to 'Export Mailing List', recipients_path + ".csv"%></dt>	
+  <dd>export the mailing list as a file</dd>
+
+  <dt><%= link_to 'Volunteers List', volunteers_path %></dt>	
+  <dd>view and manage the list of volunteers</dd>
+ 
+  <dt><%= link_to 'Export Volunteer List', volunteers_path + ".csv"%></dt>	
+  <dd>export the mailing list as a file</dd>
+</dl>
+<br>
+<%= link_to "Logout", logout_path %>
+</div>
