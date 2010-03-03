@@ -19,6 +19,8 @@ default_run_options[:pty] = true  # Forgo errors when deploying from windows
 #ssh_options[:keys] = %w(/Path/To/id_rsa)            # If you are using ssh_keys
 set :chmod755, "app config db lib public vendor script script/* public/disp*"
 set :use_sudo, false
+
+set :branch, "master"
  
 role :app, domain
 role :web, domain
