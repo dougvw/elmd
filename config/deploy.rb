@@ -5,11 +5,22 @@
 set :application, "elmd"          #the name of the folder you chose when setting up the domain
 set :repository, "git@github.com:dougvw/elmd.git"
 #set :repository, "ssh://dlv@68.248.193.32:8008/home/git/elmd.git"
+set :scm_command, "~/packages/bin/git" #updated version of git on  server in user directory
+set :local_scm_command, "/usr/local/bin/git" #correct path to local  git 
 set :branch, "master"
 set :domain, "staging.ericlarson2010.com"   #the one you ssh into
 set :user, "dougv"            #the user you created when setting up the domain (has to have shell access)
-set :use_sudo, false
+set :deploy_via, :remote_cache
+set :scm, 'git'
+set :branch, 'master'
+set :git_shallow_clone, 1
 set :scm_verbose, true
+set :use_sudo, false
+
+server domain, :app, :web
+role :db, domain, :primary => true
+
+
 #set :applicationdir, "/home/#{user}/elmd/staging/"  # The standard Dreamhost setup
  
 #set :repository, "ssh://dlv@bandit.homelinux.net:8008/home/git/elmd.git"
@@ -31,6 +42,11 @@ role :app, domain
 role :web, domain
 role :db,  domain, :primary => true
  
+namespace :deploy do
+  task :restart do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+end
 # #Passenger stop, start, and restart calls
 # namespace :deploy do
 #   desc "Restarting mod_rails with restart.txt"

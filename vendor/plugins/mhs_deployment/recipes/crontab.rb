@@ -12,9 +12,9 @@
 
 # TODO: Make this remove when starting, add when finished?
 # TODO: Make this not fail when no cron
-namespace :crontab do
-  task :install, :roles => :db, :only => { :primary => true } do
-    run "cd #{release_path} && whenever --set environment=#{rails_env} --update-crontab #{application}-#{rails_env}-#{branch}"
-  end
-end
-after "deploy:symlink", "crontab:install"
+# namespace :crontab do
+#   task :install, :roles => :db, :only => { :primary => true } do
+#     run "cd #{release_path} && whenever --set environment=#{rails_env} --update-crontab #{application}-#{rails_env}-#{branch}"
+#   end
+# end
+# after "deploy:symlink", "crontab:install"

@@ -18,7 +18,7 @@ test:
 production:
   adapter: mysql
   database: elmd_production
-  username: elmd
+  username: dougv
   password: $sf32alk!
   host: elmd-production.ericlarson2010.com
   #"eltigre:fraklin" MySQL Server
@@ -27,7 +27,7 @@ production:
 staging:
   adapter: mysql
   database: elmd_staging
-  username: elmd
+  username: dougv
   password: $sf32alk!
   host: mysql-staging.ericlarson2010.com
   #"eltigre:fraklin" MySQL Server
