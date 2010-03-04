@@ -47,6 +47,20 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 end
+
+namespace :deploy do
+  desc "set ENV['RAILS_ENV'] for mod_rails (phusion passenger)"
+  task :set_rails_env do
+    tmp = "#{current_release}/tmp/environment.rb"
+    final = "#{current_release}/config/environment.rb"
+    run <<-CMD
+      echo 'RAILS_ENV = "#{rails_env}"' > #{tmp};
+      cat #{final} >> #{tmp} && mv #{tmp} #{final};
+    CMD
+  end
+end
+ 
+after "deploy:finalize_update", "deploy:set_rails_env"
 # #Passenger stop, start, and restart calls
 # namespace :deploy do
 #   desc "Restarting mod_rails with restart.txt"
