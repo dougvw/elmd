@@ -169,3 +169,11 @@ margin: 9px 24px 6px 24px;
 }  
 
 /* ---------- Accordian End --------------- */
+
+div.contact_mode  {
+	height: 80px;
+}
+
+div.contact_target {
+	height: 80px;
+}

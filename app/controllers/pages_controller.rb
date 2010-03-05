@@ -24,6 +24,10 @@ class PagesController < ApplicationController
    
   end
   
+  def contact
+    
+  end
+  
   def make_a_donation
    
   end

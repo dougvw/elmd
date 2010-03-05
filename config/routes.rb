@@ -8,7 +8,8 @@ ActionController::Routing::Routes.draw do |map|
     pages_map.endorsements    "endorsements",         :action => "endorsements"
     pages_map.admin           "admin",              :action => "admin"
     pages_map.the_issues    "the_issues" ,        :action => "the_issues"
-    #pages_map.contact_us      "contact_us",        :action => "contact_us"
+    pages_map.contact      "contact",        :action => "contact"
+    pages_map.contribute   "contribute",      :action => "contribute"
     #pages_map.send_email      "send_email",        :action => "send_email"
   end
   
