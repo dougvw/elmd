@@ -27,13 +27,13 @@ four:
   
 five:
   title: Pro-life
-  body: <p></p><p>I am committed to protecting the rights of human life from conception.</p>
+  body: <p></p><p>As a physician, I took a pledge to first do no harm and use all of my God given skills to heal the sick. Therefore, I am committed to protecting the rights of human life from conception through death.</p>
   active: true
   order_number: 5
   
 six:
   title: Gun Rights
-  body: <p></p><p>I unequivocally support the second amendment and the right for the citizens to bear arms.</p>
+  body: <p></p><p>I unequivocally support the second amendment and the right for the citizens to bear arms. I agree with our Founding Fathers that it is important citizens have the right to defend themselves from all aggressors.</p>
   active: true
   order_number: 6
   
