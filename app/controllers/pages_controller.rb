@@ -10,25 +10,21 @@ class PagesController < ApplicationController
   def about
    
   end
-
-  def positions
-   
-  end
   
   def the_issues
    @issues = Issue.find(:all, :conditions => 'active > 0', :order => "order_number ASC")
    
   end
   
-  def endorsements
-   
-  end
+  # def endorsements
+  #  
+  # end
   
   def contact
     
   end
   
-  def make_a_donation
+  def contribute
    
   end
 
