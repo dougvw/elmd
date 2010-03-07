@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  
   def index
     @posts = Post.find(:all, :limit => 3 , :order => "created_at DESC")
   end
@@ -31,5 +32,5 @@ class PagesController < ApplicationController
   def volunteer
    
   end
-
+  
 end

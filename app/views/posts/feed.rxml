@@ -1,0 +1,16 @@
+xml.rss('version' => '2.0') do
+  xml.channel do 
+    xml.title("Eric Larson 2010")
+    xml.link(root_url)
+    xml.description("Eric Larson Campaign for Michigan State Representative 72nd District")
+    @posts.each { |p|
+      xml.item do 
+        xml.title(p.title)
+        #xml.link(@request.protocol + @request.host_with_port + url_for(:controller => "posts", :action => "show", :id => p.id))
+        xml.link post_url(p)
+        xml.description h(p.body)
+        xml.pubDate(p.created_at.rfc822)
+      end
+    }
+  end
+end

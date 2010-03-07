@@ -16,12 +16,20 @@ ActionController::Routing::Routes.draw do |map|
   map.with_options :controller => "recipients" do |recipients_map|
     recipients_map.signup "recipients/mailing_list", :action => "mailing_list"
   end
+  map.with_options :controller => :posts do |posts_map|
+    posts_map.news_feed 'news_feed', :controller => 'posts', :action => 'feed'
+  end
   
   #resources
   map.resources :recipients
   map.resources :volunteers
   map.resources :issues
   map.resources :posts
+  
+  # rss
+  #map.resources :posts, :collection => {:rss => :get}
+  #map.connect 'posts/feed.:format', :controller => 'posts', :action => 'feed'
+  
   
   #root path
   map.root :controller => "pages"

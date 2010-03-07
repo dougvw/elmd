@@ -82,4 +82,11 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # RSS Feed
+  def feed
+    @posts = Post.find(:all, :order => "created_at DESC", :limit => 10)
+    render :layout => false
+    response.headers["Content-Type"] = "application/xml; charset=utf-8"
+  end
 end
