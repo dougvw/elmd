@@ -7,7 +7,7 @@ div.container {
 }
 
 div.header {
-background:#fff url(../images/header.png) 0 0 no-repeat;
+background:#fff url(../images/header_logo.png) 0 0 no-repeat;
 height:161px;
 min-height:161px;
 }
@@ -83,6 +83,15 @@ div.colborder {
 hr {
 	color:#AAAAAA;
 	background:#AAAAAA none repeat scroll 0 0;
+}
+
+#post_title {
+	font-size: 1.5em;
+}
+
+#post_date {
+	color:#c00c18;
+	font-size: 1.2em;
 }
 
 #left_label {

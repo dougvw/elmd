@@ -3,8 +3,9 @@
 <p>As a physician, I have worked for the past ten years to help relieve people of their pain and suffering during difficult times in their lives.  Now I feel called to go to Lansing to attempt to work through the numerous problems facing Michigan.  I appreciate your support to help change the direction of our great state. Like you, I want a Michigan that rewards innovation and once again offers unlimited opportunities for our children.</p> 
 	<hr>
 	<div class="span-6 colborder">
-		<h6>This is a nested column</h6>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+		<h6>Michigan's 72nd District</h6>
+		<br>
+		<p>The 72nd House District in Michigan includes <bold>Cascade Township</bold>, Kentwood Township, Gaines Township and Caledonia Township.  It is the responsibility of the person elected in this district to take the views of it's citizens to Lansing in the State of Michigan House of Representatives.  The term of this appointment is two years.</p>
 	</div>
 	<div class="span-6 last">
 		<h6>This is another nested column</h6>
@@ -18,10 +19,13 @@
 
 	<% for post in @posts %>
 		<div class="span-6 last">
-			<h5><%=h post.title %></h5>
-			
-			<blockquote><%=h post.created_at.strftime("%b %d")%> :: <%= truncate(post.body, :length => 250)  %></blockquote>
-	
+			<div id="post_title" class="alt"><%=h post.title %></div>		
+			<div id="post_date" class="alt"><%=h post.created_at.strftime("%b %d")%></div>
+			<div><blockquote><%= truncate(post.body, :length => 250)  %>
+				<% if post.body.length > 249 %>
+					<br><%= link_to "read more", post %>
+				<% end %>
+				</blockquote></div>
 		</div>
 	<% end %>
 	<hr>
