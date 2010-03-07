@@ -58,13 +58,13 @@
 			<% form_tag '/recipients/mailing_list' do -%>
 				<div id="email_form" class="span-10 prepend-3 last">
 			    <%= text_field_tag "email" %>
-				<%= submit_tag 'Add Me to the Mailing List' %></div>
+				<%= submit_tag 'Add Me to the List' %></div>
 			<% end -%>
 			<div id="paid_for" class="span-14 prepend-5 append-5 last">
 				<% if current_user %>
 					<blockquote>Logged in as : <%= current_user.email_address %> | <%= link_to "Admin Page", admin_path %> | <%= link_to "Logout", logout_path %></blockquote>
 				<% else %>
-					<blockquote>Paid for by Friends of Eric Larson, 2215 Cascade Lakes Circle SE, Grand Rapids, MI  49546</blockquote>
+					<p><blockquote>Paid for by Friends of Eric Larson, 2215 Cascade Lakes Circle SE, Grand Rapids, MI  49546</blockquote></p>
 				<% end %>
 			</div>
 		</div>  <!-- end footer -->
