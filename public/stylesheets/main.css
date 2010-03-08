@@ -73,9 +73,13 @@ div.footer {
 }
 
 #email_form {
-	padding-top: 28px;
+	padding-top: 26px;
 }
 
+/*#list-button {
+	padding-top: 50px;
+}
+*/
 div.colborder {
 	border-right:1px solid #AAAAAA;
 }

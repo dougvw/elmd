@@ -57,8 +57,8 @@
 			</div>
 			<% form_tag '/recipients/mailing_list' do -%>
 				<div id="email_form" class="span-10 prepend-3 last">
-			    <%= text_field_tag "email" %>
-				<%= submit_tag 'Add Me to the List' %></div>
+			    <%= text_field_tag "email", '',  :style => "width:190px; height:18px;" %>
+				<%= image_submit_tag 'list_button.png', :style => "position: absolute; padding-top: 4px" %></div>
 			<% end -%>
 			<div id="paid_for" class="span-14 prepend-5 append-5 last">
 				<% if current_user %>

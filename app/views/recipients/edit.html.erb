@@ -1,47 +1,19 @@
-<h1>Editing recipient</h1>
+<div class="column span-18 prepend-1 append-1 last">
+<h2>Editing Mailing List Recipient</h2>
+
 
 <% form_for(@recipient) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </p>
-  <p>
-    <%= f.label :address_line1 %><br />
-    <%= f.text_field :address_line1 %>
-  </p>
-  <p>
-    <%= f.label :address_line2 %><br />
-    <%= f.text_field :address_line2 %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
-  </p>
-  <p>
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+	<%= render f %>
+ 
+	<div class="span-15 prepend-3 last">
+	<br>
 
+    <%= f.submit 'Update' %>
+
+<% end %>
+</div>
 <%= link_to 'Back', recipients_path %>
+</div>
+
