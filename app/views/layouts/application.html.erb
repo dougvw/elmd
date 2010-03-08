@@ -60,7 +60,7 @@
 			    <%= text_field_tag "email", '',  :style => "width:185px; height:19px; font-size: 1.1em;" %>
 				<%= image_submit_tag 'list_button.png', :style => "position: absolute; padding-top: 5px" %></div>
 			<% end -%>
-			<div id="paid_for" class="span-14 prepend-5 append-5 last">
+			<div id="paid_for" class="span-14 prepend-6 append-4 last">
 				<% if current_user %>
 					<blockquote>Logged in as : <%= current_user.email_address %> | <%= link_to "Admin Page", admin_path %> | <%= link_to "Logout", logout_path %></blockquote>
 				<% else %>
