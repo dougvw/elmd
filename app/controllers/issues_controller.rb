@@ -1,4 +1,5 @@
 class IssuesController < ApplicationController
+  restrict_to :admin, :except => [:index]
   # GET /issues
   # GET /issues.xml
   def index

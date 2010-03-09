@@ -1,4 +1,5 @@
 class VolunteersController < ApplicationController
+  restrict_to :admin, :except => [:new, :create]
   # GET /volunteers
   # GET /volunteers.xml
   def index
@@ -70,8 +71,8 @@ class VolunteersController < ApplicationController
 
     respond_to do |format|
       if @volunteer.save
-        flash[:notice] = 'Volunteer was successfully created.'
-        format.html { redirect_to(@volunteer) }
+        flash[:notice] = "Thanks for signing up #{@volunteer.first_name} !"
+        format.html { redirect_to(root_path) }
         format.xml  { render :xml => @volunteer, :status => :created, :location => @volunteer }
       else
         format.html { render :action => "new" }

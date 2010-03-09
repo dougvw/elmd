@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  restrict_to :admin, :except => [:show, :feed]
   # GET /posts
   # GET /posts.xml
   def index

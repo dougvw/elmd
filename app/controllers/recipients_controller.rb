@@ -1,4 +1,5 @@
 class RecipientsController < ApplicationController
+  restrict_to :admin, :except => [:new, :create, :destroy, :mailing_list, :show]
   # GET /recipients
   # GET /recipients.xml
   def index

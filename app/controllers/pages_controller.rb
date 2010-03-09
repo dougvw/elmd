@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  restrict_to :admin, :only => [:admin]
   
   def index
     @posts = Post.find(:all, :limit => 3 , :order => "created_at DESC")
@@ -31,6 +32,10 @@ class PagesController < ApplicationController
 
   def volunteer
    
+  end
+  
+  def thankyou
+    
   end
   
 end
