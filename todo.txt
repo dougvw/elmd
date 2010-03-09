@@ -1,7 +1,9 @@
-paypal stuff
+paypal stuff - need to fix pp account setup
 
 ?action mailer
 
-admin page
-
 authentication
+
+slide show
+
+pic for about page
