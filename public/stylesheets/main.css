@@ -181,6 +181,10 @@ div.accordion-content p{
 margin: 9px 24px 6px 24px;  
 }  
 
+div.accordion-content p + p{
+	text-indent: 0;
+}
+
 /* ---------- Accordian End --------------- */
 
 div.contact_mode  {
