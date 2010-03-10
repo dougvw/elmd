@@ -2,8 +2,6 @@ paypal stuff - need to fix pp account setup
 
 ?action mailer
 
-authentication
-
 slide show
 
 pic for about page
