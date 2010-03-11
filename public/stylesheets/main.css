@@ -187,6 +187,28 @@ div.accordion-content p + p{
 
 /* ---------- Accordian End --------------- */
 
+/* ---------- Slide Show ---------------*/
+ul#listOfImages {
+  /*background: #e5e5e5;*/
+  height: 242px;
+  margin: 0;
+  padding: 0;
+  width: 242px;
+  position: relative;
+}
+  
+  ul#listOfImages li {
+    display: block;
+    height: 242px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 242px;
+  }
+    
+/* ---------- Slide Show ---------------*/
 div.contact_mode  {
 	height: 80px;
 }

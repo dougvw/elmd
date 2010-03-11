@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="/stylesheets/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
   <%= stylesheet_link_tag 'main', 'main' %>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "slideshow" %>
+  
   <% if (controller.controller_name == "issues") || (controller_name == 'posts') %>
   	<%= javascript_include_tag "ckeditor/ckeditor" %>
   <% end %>
