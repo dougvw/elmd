@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   restrict_to :admin, :only => [:admin]
   
   def index
-    @posts = Post.find(:all, :limit => 3 , :order => "created_at DESC")
+    @posts = Post.find(:all, :limit => 2 , :order => "created_at DESC")
   end
 
   def admin
