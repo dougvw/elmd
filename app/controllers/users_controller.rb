@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     { :controller => "pages", :action => "admin" }
   end
   
+   def new
+    @user = User.new
+  end
+  
   def create
     @user = User.new(params[:user].merge(:role_id => 2, :active => true))
 
@@ -18,5 +22,5 @@ class UsersController < ApplicationController
       #redirect_to(signup_path)
     end
   end
-  
+ 
 end
