@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
     pages_map.contact      "contact",        :action => "contact"
     pages_map.contribute   "contribute",      :action => "contribute"
     pages_map.thankyou   "thankyou",      :action => "thankyou"
+    pages_map.news   "news",      :action => "news"
     #pages_map.send_email      "send_email",        :action => "send_email"
   end  
   map.with_options :controller => "recipients" do |recipients_map|

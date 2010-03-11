@@ -1,0 +1,12 @@
+<div class="span-18 last">
+	<h2><span class="alt">Latest News</span></h2>
+	<% for post in @posts %>
+		<div id="post_title" class="alt"><%=h post.title %></div>
+  		<div id="post_date" class="alt"><%=h post.created_at.strftime("%b %d, %Y")%></div>
+		<br>
+  		<div><p><%= truncate(post.body, :length => 150)  %>
+					<br><%= link_to "Read Post", post %>
+				</p> </div>
+	<% end %>
+	<%= link_to 'Home Page', root_path %>
+</div>

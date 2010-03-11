@@ -3,7 +3,7 @@ class IssuesController < ApplicationController
   # GET /issues
   # GET /issues.xml
   def index
-    @issues = Issue.all
+    @issues = Issue.find(:all, :order => "order_number ASC")
 
     respond_to do |format|
       format.html # index.html.erb

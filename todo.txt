@@ -1,7 +1,10 @@
-paypal stuff - need to fix pp account setup
-
 ?action mailer
 
-slide show
+slide show ? change code
 
 pic for about page
+
+read more news page
+
+finish map
+

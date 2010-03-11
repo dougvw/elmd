@@ -1,8 +1,9 @@
 <div class="span-18 last">
 	<h2><span class="alt">Latest News</span></h2>
 	<div id="post_title" class="alt"><%=h @post.title %></div>
-  	<div id="post_date" class="alt"><%=h @post.created_at.strftime("%b %d")%></div>
+  	<div id="post_date" class="alt"><%=h @post.created_at.strftime("%b %d, %Y")%></div>
 	<br>
-  <div><p>&nbsp;&nbsp;&nbsp;&nbsp;<%= @post.body %></p> </div>
+  <div><p><%= @post.body %></p> </div>
+	<%= link_to "All Posts", news_path %><br>
 	<%= link_to 'Home Page', root_path %>
 </div>

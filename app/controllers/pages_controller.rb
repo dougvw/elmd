@@ -38,4 +38,8 @@ class PagesController < ApplicationController
     
   end
   
+  def news
+    @posts = Post.find(:all, :order => "created_at DESC")
+  end
+  
 end
