@@ -8,7 +8,7 @@ set :repository, "git@github.com:dougvw/elmd.git"
 set :scm_command, "~/packages/bin/git" #updated version of git on  server in user directory
 set :local_scm_command, "/usr/local/bin/git" #correct path to local  git 
 set :branch, "master"
-set :domain, "staging.ericlarson2010.com"   #the one you ssh into
+set :domain, "ericlarson2010.com"   #the one you ssh into
 set :user, "dougv"            #the user you created when setting up the domain (has to have shell access)
 set :deploy_via, :remote_cache
 set :scm, 'git'
