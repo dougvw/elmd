@@ -4,6 +4,6 @@
   	<div id="post_date" class="alt"><%=h @post.created_at.strftime("%b %d, %Y")%></div>
 	<br>
   <div><p><%= @post.body %></p> </div>
-	<%= link_to "All Posts", news_path %><br>
-	<%= link_to 'Home Page', root_path %>
+	<div><%= link_to "All Posts", news_path %><br>
+	<%= link_to 'Home Page', root_path %></div>
 </div>
