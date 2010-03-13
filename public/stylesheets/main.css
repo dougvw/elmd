@@ -2,10 +2,6 @@ body {
 	background-image:url('../images/star_patt_red.jpg');
 }
 
-div.container {
-	/* background: transparent url(../images/elmd04.png) 0 0; */
-}
-
 div.header {
 background:#fff url(../images/header_logo.png) 0 0 no-repeat;
 height:161px;
@@ -20,7 +16,6 @@ div.navigation {
 
 #nav_titles ul {
 	display:inline;
-/*	left:40px;*/
 	list-style-image:none;
 	list-style-position:outside;
 	list-style-type:none;
@@ -28,7 +23,6 @@ div.navigation {
 
 #nav_titles li {
 	float:left;
-	/*margin:0 12px;*/
 }
 
 #nav_titles li a{
@@ -36,8 +30,6 @@ div.navigation {
 	display:block;
 	font-family:trebuchet ms,verdana,arial,helvetica,sans-serif;
 	font-size:1.5em;
-	/*font-weight:bold;*/
-/*	height:44px;*/
 	text-decoration:none;
 	text-transform:uppercase;
 	padding-top: 6px;
@@ -76,10 +68,6 @@ div.footer {
 	padding-top: 26px;
 }
 
-/*#list-button {
-	padding-top: 50px;
-}
-*/
 div.colborder {
 	border-right:1px solid #AAAAAA;
 }
@@ -89,13 +77,11 @@ hr {
 	background:#AAAAAA none repeat scroll 0 0;
 }
 
-#post_title {
-	font-size: 1.5em;
-}
 
 #post_date {
 	color:#c00c18;
 	font-size: 1.2em;
+	text-align: right;
 }
 
 #left_label {
@@ -116,25 +102,6 @@ hr {
 	border: 2px solid #a41d1d;
 	padding: 4px;
 }
-div.right_box {
-/*	background: #ccc;*/
-}
-
-div.left_box {
-/*	background: #ccc;*/
-}
-
-/*
-#header h1, h2, h3 {
-	color: #fff;
-}
-*/
-/*#nav-buttons {
-	color: #fff;
-	font-size: 1.8em;
-	text-align: center;
-}
-*/
 
 /* --------- Accordian ----------- */
 div#test-accordion{  

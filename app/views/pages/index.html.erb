@@ -16,10 +16,10 @@ As a physician, I have worked for over a decade to ease the pain of my patients 
 
 	<% for post in @posts %>
 		<div class="span-6 last">
-			<div id="post_title" class="alt"><%=h post.title %></div>		
-			<div id="post_date" class="alt"><%=h post.created_at.strftime("%b %d")%></div>
-			<div><blockquote><%= truncate(post.body, :length => 250)  %>
-				<% if post.body.length > 249 %>
+			<div><%=h post.title %></div>		
+			
+			<div><blockquote><%= truncate(post.body, :length => 200)  %>
+				<% if post.body.length > 199 %>
 					<br><%= link_to "read more", post %>
 				<% end %>
 				</blockquote></div>

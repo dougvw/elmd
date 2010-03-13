@@ -1,10 +1,10 @@
 <div class="span-18 last">
 	<h2><span class="alt">Latest News</span></h2>
 	<% for post in @posts %>
-		<div id="post_title" class="alt"><%=h post.title %></div>
-  		<div id="post_date" class="alt"><%=h post.created_at.strftime("%b %d, %Y")%></div>
+		<div class="span-15"><h3><%=h post.title %></h3></div>
+  		<div id="post_date" class="span-3 last alt"><%=h post.created_at.strftime("%b %d, %Y")%></div>
 		<br>
-  		<div><p><%= truncate(post.body, :length => 150)  %>
+  		<div class="span-18 last"><p><%= truncate(post.body, :length => 150)  %>
 					<br><%= link_to "Read Post", post %>
 				</p> </div>
 	<% end %>
