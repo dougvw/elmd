@@ -5,14 +5,12 @@
   <tr>
     <th>Title</th>
     <th>Body</th>
-    <th>Post type</th>
   </tr>
 
 <% @posts.each do |post| %>
   <tr>
     <td><%=h post.title %></td>
     <td><%= truncate(post.body, :length => 50)  %></td>
-    <td><%=h post.post_type %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
