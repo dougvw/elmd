@@ -10,23 +10,9 @@ As a physician, I have worked for over a decade to ease the pain of my patients 
 <div class="span-6 last">
 	<br>
 	<a href="/contribute" style="padding-left: 14px;"><img src="../images/donate_200b.png" alt="donate"></a>
-	<br><br>
+	<br>
+		<div><iframe scrolling="no" frameborder="0" src="http://www.facebook.com/connect/connect.php?id=237929759141&connections=10&stream=1&css=PATH_TO_STYLE_SHEET&locale=your_LOCALE" allowtransparency="true" style="border: none; width: 250px; height: 650px;"></iframe> </div>
 	<hr>
-	<h2><span class="alt">Latest News</span></h2>
-
-	<% for post in @posts %>
-		<div class="span-6 last">
-			<div><%=h post.title %></div>		
-			
-			<div><blockquote><%= truncate(post.body, :length => 200)  %>
-				<% if post.body.length > 199 %>
-					<br><%= link_to "read more", post %>
-				<% end %>
-				</blockquote></div>
-		</div>
-	<% end %>
-	<div class="span-4 prepend-2 last" style="padding-bottom: 14px;"><%= link_to "Older News", news_path %></div>
-	<hr>	
 	<p>	
 		<script type="text/javascript">new SlideShow('listOfImages', {
   		slideDuration: 5,
